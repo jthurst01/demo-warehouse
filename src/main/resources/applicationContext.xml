@@ -28,7 +28,7 @@
 	<tx:annotation-driven />
     
     <fss:oauth>
-		<fss:oauthInfo endpoint="https://jhurst-wsl:8182"
+		<fss:oauthInfo endpoint="http://jhurst-wsl:8182"
 		        oauth-key="#{systemEnvironment['OAUTH_CLIENT_KEY']}"
 		        oauth-secret="#{systemEnvironment['OAUTH_CLIENT_SECRET']}"/>
 	</fss:oauth>
