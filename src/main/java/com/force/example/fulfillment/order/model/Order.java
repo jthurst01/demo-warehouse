@@ -22,6 +22,9 @@ public class Order {
 	@Size(min = 15, max = 18)
 	private String id;
 
+    @Column
+    private String status;
+
 	public Integer getOrderId() {
 		return orderId;
 	}
@@ -37,9 +40,17 @@ public class Order {
 	public void setId(String id) {
 		this.id = id;
 	}
-	
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
 	public String toString() {
 		return new ToStringCreator(this).append("orderId", orderId).append("id", id)
-				.toString();
+				.append("status", status).toString();
 	}
 }

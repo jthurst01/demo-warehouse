@@ -68,6 +68,7 @@ public class OrderController {
 				HashMap<String, Object> map = new HashMap<String, Object>();
 				map.put("id", order.getId());
 				map.put("order_number", order.getOrderId());
+                map.put("status", order.getStatus());
 				responseList.add(map);
 			}
 			return responseList;
