@@ -1,10 +1,6 @@
 package com.force.example.fulfillment.order.controller;
 
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 import javax.servlet.http.HttpServletResponse;
 import javax.validation.ConstraintViolation;
@@ -12,10 +8,8 @@ import javax.validation.Valid;
 import javax.validation.Validator;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.MediaType;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -28,7 +22,7 @@ import com.force.example.fulfillment.order.service.OrderService;
 
 @Controller
 @RequestMapping(value="/order")
-public class OrderController {
+public class    OrderController {
 	
 	@Autowired
 	private OrderService orderService;
@@ -77,7 +71,15 @@ public class OrderController {
 	
 	@RequestMapping(method=RequestMethod.GET)
 	public @ResponseBody List<Order> getOrders() {
-		return orderService.listOrders();
+        List<Order> lo = orderService.listOrders();
+
+        // Need to clone the array list into an object that
+        // is friendly to deserialization.
+        List<Order> lo2 = new ArrayList<Order>();
+        for (Order o : lo) {
+            lo2.add(o.toJsonFriendly());
+        }
+        return lo2;
 	}
 
 	@RequestMapping(value="{orderId}", method=RequestMethod.GET)
