@@ -12,7 +12,14 @@
 			<link rel="stylesheet" href="<c:url value="/resources/blueprint/ie.css" />" type="text/css" media="screen, projection">
 		<![endif]-->
 		<script type="text/javascript" src="<c:url value="/resources/jquery-1.4.min.js" /> "></script>
-		<script type="text/javascript" src="<c:url value="/resources/json.min.js" /> "></script>
+        <script type="text/javascript" src="<c:url value="/resources/json2.js" /> "></script>
+        <script type="text/javascript" src="<c:url value="/resources/canvas-all.js" /> "></script>
+
+        <c:if test="${not empty signedRequestJson}">
+          <script type="text/javascript"/>
+            var signedRequest = JSON.parse('<c:out value="${signedRequestJson}"/>');
+          </script>
+        </c:if>
 	</head>
 	<body>
 		<div class="container">
@@ -24,13 +31,13 @@
 					Enter a 15 or 18 character Invoice Statement ID to create an order.
 				</p>
 				<form:form modelAttribute="order" action="order" method="post">
-				  	<fieldset>		
+				  	<fieldset>
 						<legend>Order Fields</legend>
 						<p>
 							<form:label	id="idLabel" for="id" path="id" cssErrorClass="error">Id</form:label><br/>
 							<form:input path="id" /><form:errors path="id" />
 						</p>
-						<p>	
+						<p>
 							<input id="create" type="submit" value="Create" />
 						</p>
 					</fieldset>
@@ -44,12 +51,12 @@
 				<tr><th>Invoice ID</th><th>Order Number</th><th>Order Status</th></tr>
 			    <c:forEach items="${orders}" var="order">
 			    	<tr><td><a href="orderui/${order.orderId}"><c:out value="${order.id}"/></a></td><td><a href="orderui/${order.orderId}"><c:out value="${order.orderId}"/></a></td><td><a href="orderui/${order.orderId}"><c:out value="${order.status}"/></a></td></tr>
-			    </c:forEach>			
+			    </c:forEach>
 			</table>
 		</div>
 	</body>
 
-	<script type="text/javascript">	
+	<script type="text/javascript">
 		$(document).ready(function() {
 			$("#order").submit(function() {
 				var order = $(this).serializeObject();
@@ -58,14 +65,14 @@
 						alert("Created order "+data[0].order_number+
 								"\nID = "+order.id);
 						window.location.reload(true);
-					});			
+					});
 				}, function(data) {
 					var response = JSON.parse(data.response);
 					alert("Error: "+response[0].id);
 				});
-				return false;				
+				return false;
 			});
 		});
 	</script>
-	
+
 </html>
