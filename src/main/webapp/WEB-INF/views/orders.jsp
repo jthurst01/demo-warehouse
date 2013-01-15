@@ -17,7 +17,7 @@
 
         <c:if test="${not empty signedRequestJson}">
           <script type="text/javascript"/>
-            var signedRequest = JSON.parse('<c:out value="${signedRequestJson}"/>');
+            var signedRequest = JSON.parse('<c:out value="${signedRequestJson}" escapeXml="false"/>');
           </script>
         </c:if>
 	</head>
