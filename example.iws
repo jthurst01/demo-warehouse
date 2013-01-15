@@ -196,19 +196,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="OrderService.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/force/example/fulfillment/order/service/OrderService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="23" selection-start="229" selection-end="229" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="OrderServiceImpl.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="OrderServiceImpl.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/force/example/fulfillment/order/service/OrderServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="14" selection-start="633" selection-end="633" vertical-scroll-proportion="0.0">
+            <state line="26" column="0" selection-start="674" selection-end="674" vertical-scroll-proportion="0.30164534">
               <folding />
             </state>
           </provider>
@@ -217,7 +208,7 @@
       <file leaf-file-name="OrderUIController.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/force/example/fulfillment/order/controller/OrderUIController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="71" column="32" selection-start="2283" selection-end="2283" vertical-scroll-proportion="0.0">
+            <state line="40" column="60" selection-start="1292" selection-end="1302" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -253,7 +244,7 @@
       <file leaf-file-name="OrderController.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/force/example/fulfillment/order/controller/OrderController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="77" column="0" selection-start="2691" selection-end="2691" vertical-scroll-proportion="0.0">
+            <state line="97" column="87" selection-start="3317" selection-end="3317" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="e#2730#2737#0" expanded="true" />
               </folding>
@@ -261,10 +252,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="applicationContext.xml" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="applicationContext.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/applicationContext.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="51" selection-start="2009" selection-end="2028" vertical-scroll-proportion="0.64606744">
+            <state line="32" column="51" selection-start="2009" selection-end="2028" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="orders.jsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/orders.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="order.jsp" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/order.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0">
               <folding />
             </state>
           </provider>
@@ -299,11 +308,11 @@
         <option value="$PROJECT_DIR$/src/main/java/com/force/example/fulfillment/order/service/InvoiceServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/force/example/fulfillment/order/model/LineItemX.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/force/example/fulfillment/order/model/OrderX.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/force/example/fulfillment/order/service/OrderServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/force/example/fulfillment/order/model/LineItem.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/force/example/fulfillment/order/model/Order.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/force/example/fulfillment/order/controller/OrderController.java" />
         <option value="$PROJECT_DIR$/src/main/resources/applicationContext.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/force/example/fulfillment/order/service/OrderServiceImpl.java" />
       </list>
     </option>
   </component>
@@ -665,6 +674,28 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="example" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="canvas-warehouse" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -789,7 +820,7 @@
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30703014" sideWeight="0.7915007" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.276901" sideWeight="0.7915007" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="what the precheckin?" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -941,16 +972,6 @@
         <state line="8" column="23" selection-start="229" selection-end="229" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/force/example/fulfillment/order/service/OrderServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="14" selection-start="633" selection-end="633" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/force/example/fulfillment/order/controller/OrderUIController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="71" column="32" selection-start="2283" selection-end="2283" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/force/example/fulfillment/order/model/LineItem.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="93" column="20" selection-start="1822" selection-end="1838" vertical-scroll-proportion="0.0" />
@@ -973,18 +994,46 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/applicationContext.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="51" selection-start="2009" selection-end="2028" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/orders.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/order.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/force/example/fulfillment/order/controller/OrderUIController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="60" selection-start="1292" selection-end="1302" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/force/example/fulfillment/order/controller/OrderController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="77" column="0" selection-start="2691" selection-end="2691" vertical-scroll-proportion="0.0">
+        <state line="97" column="87" selection-start="3317" selection-end="3317" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="e#2730#2737#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/applicationContext.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/force/example/fulfillment/order/service/OrderServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="51" selection-start="2009" selection-end="2028" vertical-scroll-proportion="0.64606744">
+        <state line="26" column="0" selection-start="674" selection-end="674" vertical-scroll-proportion="0.30164534">
           <folding />
         </state>
       </provider>

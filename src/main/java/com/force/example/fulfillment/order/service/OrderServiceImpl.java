@@ -23,7 +23,7 @@ public class OrderServiceImpl implements OrderService {
         em.persist(order);
     }
 
-    @Transactional
+//    @Transactional
 	public List<Order> listOrders() {
 		CriteriaQuery<Order> c = em.getCriteriaBuilder().createQuery(Order.class);
         c.from(Order.class);
@@ -35,7 +35,7 @@ public class OrderServiceImpl implements OrderService {
         return null;
     }
 
-    @Transactional
+//    @Transactional
 	public Order findOrder(Integer orderId) {
 		return em.find(Order.class, orderId);
 	}
