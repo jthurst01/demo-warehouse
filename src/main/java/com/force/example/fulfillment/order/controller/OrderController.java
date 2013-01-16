@@ -20,7 +20,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 import com.force.example.fulfillment.order.model.Order;
 import com.force.example.fulfillment.order.service.OrderService;
 
-@Controller
+@Controller 
 @RequestMapping(value="/order")
 public class    OrderController {
 	
