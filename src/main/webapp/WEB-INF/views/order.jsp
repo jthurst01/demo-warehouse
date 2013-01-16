@@ -29,7 +29,7 @@
                     Line Items
                 </h2>
                 <h3>
-                    SR = <%= session.getAttribute("signedRequestJson") %>
+                    SR = ${signedRequestJson} %>
                 </h3>
                 <table>
                     <tr><th>ID</th><th>Line Item ID</th><th>Quantity</th><th>Unit Price</th><th>Total</th><th>Item</th></tr>
