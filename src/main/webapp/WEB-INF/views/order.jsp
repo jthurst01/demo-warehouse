@@ -18,26 +18,34 @@
 	<body>
 		<div class="container">
 			<h2>
-				Order <c:out value="${order.orderId}"/>
+				Order <c:out value="${order.id}"/>
 			</h2>
 			<div class="span-12 last">
-                <h3>Invoice</h3>
-                <p>Number: <c:out value="${invoice.number}"/></p>
-                <p>Description: <c:out value="${invoice.description}"/></p>
+                <p>Order Id: <c:out value="${order.orderId}"/></p>
+                <p>Total: <c:out value="${order.total}"/></p>
                 <p>Status: <c:out value="${order.status}"/></p>
-			    <a href="javascript:history.back()">Back</a> <input id="delete" type="submit" value="Delete" />
+                <p>Line Items:</p>
+                <c:forEach items="${order.lineItems}" var="li">
+                    <p>Id: <c:out value="${li.id}"/></p>
+                    <p>Line Item Id: <c:out value="${li.lineItemId}"/></p>
+                    <p>Quantity: <c:out value="${li.quantity}"/></p>
+                    <p>Unit Price: <c:out value="${li.unitPrice}"/></p>
+                    <p>Total: <c:out value="${li.total}"/></p>
+                    <p>Item: <c:out value="${li.item}"/></p>
+                </c:forEach>
+			    <a href="/orders">Back</a> <input id="delete" type="submit" value="Delete" />
 			</div>
 		</div>	
 	</body>
-	<script>
-	$("#delete").click(function() {
-		$.deleteJSON("/order/${order.orderId}", function(data) {
-			alert("Deleted order ${order.orderId}");
-			location.href = "/orderui";
-		}, function(data) {
-			alert("Error deleting order ${order.orderId}");
-		});
-		return false;				
-	});
-	</script>
+	<%--<script>--%>
+	<%--$("#delete").click(function() {--%>
+		<%--$.deleteJSON("/order/${order.orderId}", function(data) {--%>
+			<%--alert("Deleted order ${order.orderId}");--%>
+			<%--location.href = "/orderui";--%>
+		<%--}, function(data) {--%>
+			<%--alert("Error deleting order ${order.orderId}");--%>
+		<%--});--%>
+		<%--return false;				--%>
+	<%--});--%>
+	<%--</script>--%>
 </html>
