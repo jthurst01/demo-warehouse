@@ -50,7 +50,7 @@
 			<table>
 				<tr><th>Invoice ID</th><th>Order Number</th><th>Order Status</th></tr>
 			    <c:forEach items="${orders}" var="order">
-			    	<tr><td><a href="orderui/${order.orderId}"><c:out value="${order.id}"/></a></td><td><a href="orderui/${order.orderId}"><c:out value="${order.orderId}"/></a></td><td><a href="orderui/${order.orderId}"><c:out value="${order.status}"/></a></td></tr>
+			    	<tr><td><a href="orderui/${order.id}"><c:out value="${order.id}"/></a></td><td><a href="orderui/${order.id}"><c:out value="${order.orderId}"/></a></td><td><a href="orderui/${order.id}"><c:out value="${order.status}"/></a></td></tr>
 			    </c:forEach>
 			</table>
 		</div>
