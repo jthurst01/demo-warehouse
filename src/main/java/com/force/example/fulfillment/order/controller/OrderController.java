@@ -82,7 +82,7 @@ public class    OrderController {
         return lo2;
 	}
 
-	@RequestMapping(value="{orderId}", method=RequestMethod.GET)
+	@RequestMapping(value="{id}", method=RequestMethod.GET)
 	public @ResponseBody Order getOrder(@PathVariable String id) {
 		Order order = orderService.findOrder(id);
 		if (order == null) {
@@ -91,7 +91,7 @@ public class    OrderController {
 		return order;
 	}
 	
-	@RequestMapping(value="{orderId}", method=RequestMethod.DELETE)
+	@RequestMapping(value="{id}", method=RequestMethod.DELETE)
 	@ResponseStatus(HttpStatus.OK)
 	public void deleteOrder(@PathVariable String id) {
 		orderService.removeOrder(id);

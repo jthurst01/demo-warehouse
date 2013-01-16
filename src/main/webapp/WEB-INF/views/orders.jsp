@@ -16,6 +16,7 @@
         <script type="text/javascript" src="<c:url value="/resources/canvas-all.js" /> "></script>
 
         <c:if test="${not empty signedRequestJson}">
+         <c:out value="${sessionScope.signedRequestJson}"/>
           <script type="text/javascript">
             var signedRequest = JSON.parse('<c:out value="${signedRequestJson}" escapeXml="false"/>');
           </script>

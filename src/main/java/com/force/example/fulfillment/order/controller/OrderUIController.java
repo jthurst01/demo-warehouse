@@ -1,5 +1,7 @@
 package com.force.example.fulfillment.order.controller;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import javax.validation.Validator;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,6 +21,8 @@ import com.force.example.fulfillment.order.service.OrderService;
 @RequestMapping(value="/orderui")
 public class OrderUIController {
 
+    private static final String SIGNED_REQUEST = "signedRequestJson";
+
 	@Autowired
 	private OrderService orderService;
 
@@ -37,9 +41,11 @@ public class OrderUIController {
 	}
 
 	@RequestMapping(method=RequestMethod.POST)
-	public String postSignedRequest(Model model,@RequestParam(value="signed_request")String signedRequest){
+	public String postSignedRequest(Model model,@RequestParam(value="signed_request")String signedRequest, HttpServletRequest request){
 	    String srJson = SignedRequest.verifyAndDecodeAsJson(signedRequest, getConsumerSecret());
-	    model.addAttribute("signedRequestJson", srJson);
+        HttpSession session = request.getSession(true);
+        session.setAttribute(SIGNED_REQUEST, srJson);
+	    model.addAttribute(SIGNED_REQUEST, srJson);
 		return getOrdersPage(model);
 	}
 
