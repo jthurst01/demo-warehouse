@@ -33,7 +33,7 @@
                     <p>Total: <c:out value="${li.total}"/></p>
                     <p>Item: <c:out value="${li.item}"/></p>
                 </c:forEach>
-			    <a href="/orders">Back</a> <input id="delete" type="submit" value="Delete" />
+			    <a href="/orderui">Back</a> <input id="delete" type="submit" value="Delete" />
 			</div>
 		</div>	
 	</body>
