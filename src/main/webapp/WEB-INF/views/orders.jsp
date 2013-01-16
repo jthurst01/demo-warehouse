@@ -23,12 +23,11 @@
 	</head>
 	<body>
 		<div class="container">
-			<hr>
 			<h2>
 				Existing Orders
 			</h2>
-			<table>
-				<tr><th>Invoice ID</th><th>Order Number</th><th>Order Status</th><th>Order Total</th><th>Line Items</th></tr>
+			<table width="75%">
+				<tr><th width="25%">Order ID</th><th width="20%">Order Number</th><th width="15%">Order Status</th><th width="15%">Order Total</th><th width="*">Line Items</th></tr>
 			    <c:forEach items="${orders}" var="order">
 			    	<tr>
 			          <td><a href="orderui/${order.id}"><c:out value="${order.id}"/></a></td>
