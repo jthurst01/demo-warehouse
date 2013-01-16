@@ -199,7 +199,7 @@
       <file leaf-file-name="OrderServiceImpl.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/force/example/fulfillment/order/service/OrderServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="0" selection-start="674" selection-end="674" vertical-scroll-proportion="0.30164534">
+            <state line="29" column="0" selection-start="815" selection-end="815" vertical-scroll-proportion="0.4034091">
               <folding />
             </state>
           </provider>
@@ -217,7 +217,7 @@
       <file leaf-file-name="LineItem.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/force/example/fulfillment/order/model/LineItem.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="93" column="20" selection-start="1822" selection-end="1838" vertical-scroll-proportion="0.0">
+            <state line="25" column="23" selection-start="594" selection-end="613" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -244,7 +244,7 @@
       <file leaf-file-name="OrderController.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/force/example/fulfillment/order/controller/OrderController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="97" column="87" selection-start="3317" selection-end="3317" vertical-scroll-proportion="0.0">
+            <state line="73" column="48" selection-start="2573" selection-end="2583" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="e#2730#2737#0" expanded="true" />
               </folding>
@@ -255,7 +255,7 @@
       <file leaf-file-name="applicationContext.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/applicationContext.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="32" column="51" selection-start="2009" selection-end="2028" vertical-scroll-proportion="0.0">
+            <state line="76" column="43" selection-start="3768" selection-end="3784" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -811,7 +811,7 @@
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20849934" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20849934" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -820,7 +820,7 @@
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.276901" sideWeight="0.7915007" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.276901" sideWeight="0.7915007" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="what the precheckin?" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -972,16 +972,6 @@
         <state line="8" column="23" selection-start="229" selection-end="229" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/force/example/fulfillment/order/model/LineItem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="93" column="20" selection-start="1822" selection-end="1838" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/force/example/fulfillment/order/model/Order.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="82" column="21" selection-start="1788" selection-end="1809" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/force/example/fulfillment/order/model/Invoice.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="7" column="1" selection-start="229" selection-end="229" vertical-scroll-proportion="0.0" />
@@ -990,13 +980,6 @@
     <entry file="jar:///System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Classes/classes.jar!/java/lang/Object.class">
       <provider selected="true" editor-type-id="text-editor">
         <state line="17" column="38" selection-start="479" selection-end="479" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/applicationContext.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="51" selection-start="2009" selection-end="2028" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -1024,16 +1007,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/force/example/fulfillment/order/controller/OrderController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="97" column="87" selection-start="3317" selection-end="3317" vertical-scroll-proportion="0.0">
+        <state line="73" column="48" selection-start="2573" selection-end="2583" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="e#2730#2737#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/force/example/fulfillment/order/model/Order.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="82" column="21" selection-start="1788" selection-end="1809" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/force/example/fulfillment/order/model/LineItem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="23" selection-start="594" selection-end="613" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/applicationContext.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="76" column="43" selection-start="3768" selection-end="3784" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/force/example/fulfillment/order/service/OrderServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="0" selection-start="674" selection-end="674" vertical-scroll-proportion="0.30164534">
+        <state line="29" column="0" selection-start="815" selection-end="815" vertical-scroll-proportion="0.4034091">
           <folding />
         </state>
       </provider>

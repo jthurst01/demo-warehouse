@@ -27,12 +27,7 @@ public class OrderServiceImpl implements OrderService {
 	public List<Order> listOrders() {
 		CriteriaQuery<Order> c = em.getCriteriaBuilder().createQuery(Order.class);
         c.from(Order.class);
-        try {
-            return em.createQuery(c).getResultList();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return null;
+        return em.createQuery(c).getResultList();
     }
 
 //    @Transactional
