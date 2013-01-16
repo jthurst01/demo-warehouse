@@ -83,18 +83,18 @@ public class    OrderController {
 	}
 
 	@RequestMapping(value="{orderId}", method=RequestMethod.GET)
-	public @ResponseBody Order getOrder(@PathVariable Integer orderId) {
-		Order order = orderService.findOrder(orderId);
+	public @ResponseBody Order getOrder(@PathVariable String id) {
+		Order order = orderService.findOrder(id);
 		if (order == null) {
-			throw new ResourceNotFoundException(orderId);
+			throw new ResourceNotFoundException(id);
 		}
 		return order;
 	}
 	
 	@RequestMapping(value="{orderId}", method=RequestMethod.DELETE)
 	@ResponseStatus(HttpStatus.OK)
-	public void deleteOrder(@PathVariable Integer orderId) {
-		orderService.removeOrder(orderId);
+	public void deleteOrder(@PathVariable String id) {
+		orderService.removeOrder(id);
 	}
 	
 	// internal helper

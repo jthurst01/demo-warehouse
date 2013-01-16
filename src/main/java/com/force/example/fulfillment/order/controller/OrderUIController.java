@@ -50,10 +50,10 @@ public class OrderUIController {
 	}
 
 	@RequestMapping(value="{orderId}", method=RequestMethod.GET)
-	public String getOrderPage(@PathVariable Integer orderId, Model model) {
-		Order order = orderService.findOrder(orderId);
+	public String getOrderPage(@PathVariable String id, Model model) {
+		Order order = orderService.findOrder(id);
 		if (order == null) {
-			throw new ResourceNotFoundException(orderId);
+			throw new ResourceNotFoundException(id);
 		}
 		model.addAttribute("order", order);
 
