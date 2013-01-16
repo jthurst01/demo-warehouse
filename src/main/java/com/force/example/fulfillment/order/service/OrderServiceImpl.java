@@ -23,21 +23,19 @@ public class OrderServiceImpl implements OrderService {
         em.persist(order);
     }
 
-//    @Transactional
 	public List<Order> listOrders() {
 		CriteriaQuery<Order> c = em.getCriteriaBuilder().createQuery(Order.class);
         c.from(Order.class);
         return em.createQuery(c).getResultList();
     }
 
-//    @Transactional
-	public Order findOrder(Integer orderId) {
-		return em.find(Order.class, orderId);
+	public Order findOrder(String id) {
+		return em.find(Order.class, id);
 	}
 	
     @Transactional
-	public void removeOrder(Integer orderId) {
-		Order order = em.find(Order.class, orderId);
+	public void removeOrder(String id) {
+		Order order = em.find(Order.class, id);
 		if (null != order) {
 			em.remove(order);
 		}
