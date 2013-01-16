@@ -23,34 +23,20 @@
 	</head>
 	<body>
 		<div class="container">
-			<h2>
-				Create Order
-			</h2>
-			<div class="span-12 last">
-				<p>
-					Enter a 15 or 18 character Invoice Statement ID to create an order.
-				</p>
-				<form:form modelAttribute="order" action="order" method="post">
-				  	<fieldset>
-						<legend>Order Fields</legend>
-						<p>
-							<form:label	id="idLabel" for="id" path="id" cssErrorClass="error">Id</form:label><br/>
-							<form:input path="id" /><form:errors path="id" />
-						</p>
-						<p>
-							<input id="create" type="submit" value="Create" />
-						</p>
-					</fieldset>
-				</form:form>
-			</div>
 			<hr>
 			<h2>
 				Existing Orders
 			</h2>
 			<table>
-				<tr><th>Invoice ID</th><th>Order Number</th><th>Order Status</th></tr>
+				<tr><th>Invoice ID</th><th>Order Number</th><th>Order Status</th><th>Order Total</th><th>Line Items</th></tr>
 			    <c:forEach items="${orders}" var="order">
-			    	<tr><td><a href="orderui/${order.id}"><c:out value="${order.id}"/></a></td><td><a href="orderui/${order.id}"><c:out value="${order.orderId}"/></a></td><td><a href="orderui/${order.id}"><c:out value="${order.status}"/></a></td></tr>
+			    	<tr>
+			          <td><a href="orderui/${order.id}"><c:out value="${order.id}"/></a></td>
+			    	  <td><a href="orderui/${order.id}"><c:out value="${order.orderId}"/></a></td>
+                      <td><a href="orderui/${order.id}"><c:out value="${order.status}"/></a></td>
+                      <td><c:out value="${order.total}"/></td>
+                      <td><c:out value="${order.lineItemCount}"/></td>
+			    	</tr>
 			    </c:forEach>
 			</table>
 		</div>

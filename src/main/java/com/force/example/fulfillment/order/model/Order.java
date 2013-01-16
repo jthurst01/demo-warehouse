@@ -108,4 +108,9 @@ public class Order {
         return o;
     }
 
+    @Transient
+    public int getLineItemCount(){
+        return getLineItems().size();
+    }
+
 }
