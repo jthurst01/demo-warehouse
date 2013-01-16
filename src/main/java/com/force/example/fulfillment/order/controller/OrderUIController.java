@@ -12,10 +12,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import canvas.SignedRequest;
 
-import com.force.api.ApiException;
-import com.force.example.fulfillment.order.model.Invoice;
 import com.force.example.fulfillment.order.model.Order;
-import com.force.example.fulfillment.order.service.InvoiceService;
 import com.force.example.fulfillment.order.service.OrderService;
 
 @Controller
@@ -24,9 +21,6 @@ public class OrderUIController {
 
 	@Autowired
 	private OrderService orderService;
-
-    @Autowired
-    private InvoiceService invoiceService;
 
 	private Validator validator;
 
@@ -56,15 +50,6 @@ public class OrderUIController {
 			throw new ResourceNotFoundException(id);
 		}
 		model.addAttribute("order", order);
-
-        Invoice invoice;
-        try {
-            invoice = invoiceService.findInvoice(order.getId());
-        } catch (ApiException ae) {
-        	// No match
-        	invoice = new Invoice();
-        }
-        model.addAttribute("invoice", invoice);
 
 		return "order";
 	}

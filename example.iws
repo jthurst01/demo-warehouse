@@ -217,8 +217,10 @@
       <file leaf-file-name="OrderUIController.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/force/example/fulfillment/order/controller/OrderUIController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="55" column="29" selection-start="1874" selection-end="1874" vertical-scroll-proportion="0.39073807">
-              <folding />
+            <state line="19" column="62" selection-start="688" selection-end="721" vertical-scroll-proportion="0.42857143">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -1016,11 +1018,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/force/example/fulfillment/order/service/InvoiceServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="0" selection-start="1210" selection-end="1210" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/force/example/fulfillment/order/service/OrderService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="10" column="35" selection-start="322" selection-end="322" vertical-scroll-proportion="0.0">
@@ -1042,10 +1039,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/force/example/fulfillment/order/service/InvoiceServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="0" selection-start="1210" selection-end="1210" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/force/example/fulfillment/order/controller/OrderUIController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="55" column="29" selection-start="1874" selection-end="1874" vertical-scroll-proportion="0.39073807">
-          <folding />
+        <state line="19" column="62" selection-start="688" selection-end="721" vertical-scroll-proportion="0.42857143">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
