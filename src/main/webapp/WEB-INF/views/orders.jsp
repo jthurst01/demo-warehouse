@@ -7,7 +7,7 @@
 	<head>
 		<title>Orders</title>
 		<link rel="stylesheet" href="<c:url value="/resources/blueprint/screen.css" />" type="text/css" media="screen, projection">
-		<link rel="stylesheet" href="<c:url value="/resources/blueprint/print.css" />" type="text/css" media="print">
+		<%--<link rel="stylesheet" href="<c:url value="/resources/blueprint/print.css" />" type="text/css" media="print">--%>
 		<!--[if lt IE 8]>
 			<link rel="stylesheet" href="<c:url value="/resources/blueprint/ie.css" />" type="text/css" media="screen, projection">
 		<![endif]-->
@@ -16,7 +16,7 @@
         <script type="text/javascript" src="<c:url value="/resources/canvas-all.js" /> "></script>
 
         <c:if test="${not empty signedRequestJson}">
-          <script type="text/javascript"/>
+          <script type="text/javascript">
             var signedRequest = JSON.parse('<c:out value="${signedRequestJson}" escapeXml="false"/>');
           </script>
         </c:if>
