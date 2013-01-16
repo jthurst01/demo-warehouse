@@ -94,6 +94,21 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
+    <line_breakpoints>
+      <breakpoint url="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/order.jsp" line="23" class="order.jsp" package="$PROJECT_DIR$/src/main/webapp/WEB-INF/views">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="false" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+    </line_breakpoints>
     <breakpoint_any>
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -205,10 +220,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="order.jsp" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="order.jsp" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/order.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="49" column="32" selection-start="2360" selection-end="2360" vertical-scroll-proportion="-30.625">
+            <state line="27" column="68" selection-start="1331" selection-end="1331" vertical-scroll-proportion="0.5955882">
               <folding />
             </state>
           </provider>
@@ -254,10 +269,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="orders.jsp" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="orders.jsp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/orders.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="57" selection-start="1079" selection-end="1079" vertical-scroll-proportion="0.4047976">
+            <state line="18" column="0" selection-start="1022" selection-end="1022" vertical-scroll-proportion="-9.375">
               <folding />
             </state>
           </provider>
@@ -319,10 +334,10 @@
         <option value="$PROJECT_DIR$/src/main/java/com/force/example/fulfillment/order/service/OrderService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/force/example/fulfillment/order/controller/ResourceNotFoundException.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/blueprint/screen.css" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/order.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/com/force/example/fulfillment/order/controller/OrderController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/force/example/fulfillment/order/controller/OrderUIController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/orders.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/order.jsp" />
       </list>
     </option>
   </component>
@@ -1098,13 +1113,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/order.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="32" selection-start="2360" selection-end="2360" vertical-scroll-proportion="-30.625">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/force/example/fulfillment/order/controller/OrderController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="84" column="56" selection-start="2899" selection-end="2899" vertical-scroll-proportion="0.0">
@@ -1125,7 +1133,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/orders.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="57" selection-start="1079" selection-end="1079" vertical-scroll-proportion="0.4047976">
+        <state line="18" column="0" selection-start="1022" selection-end="1022" vertical-scroll-proportion="-9.375">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/order.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="68" selection-start="1331" selection-end="1331" vertical-scroll-proportion="0.5955882">
           <folding />
         </state>
       </provider>
