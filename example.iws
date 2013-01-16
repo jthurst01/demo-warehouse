@@ -205,10 +205,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="order.jsp" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="order.jsp" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/order.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="62" selection-start="733" selection-end="733" vertical-scroll-proportion="-8.125">
+            <state line="49" column="32" selection-start="2360" selection-end="2360" vertical-scroll-proportion="0.75">
               <folding />
             </state>
           </provider>
@@ -223,10 +223,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="screen.css" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="screen.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/blueprint/screen.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="58" column="48" selection-start="2601" selection-end="2601" vertical-scroll-proportion="0.3774436">
+            <state line="58" column="48" selection-start="2601" selection-end="2601" vertical-scroll-proportion="-9.653846">
               <folding />
             </state>
           </provider>
@@ -318,9 +318,9 @@
         <option value="$PROJECT_DIR$/src/main/java/com/force/example/fulfillment/order/controller/ResourceNotFoundException.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/force/example/fulfillment/order/controller/OrderController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/force/example/fulfillment/order/controller/OrderUIController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/order.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/orders.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/blueprint/screen.css" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/order.jsp" />
       </list>
     </option>
   </component>
@@ -1107,13 +1107,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/order.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="62" selection-start="733" selection-end="733" vertical-scroll-proportion="-8.125">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/orders.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="40" selection-start="677" selection-end="677" vertical-scroll-proportion="-7.5">
@@ -1123,7 +1116,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/blueprint/screen.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="58" column="48" selection-start="2601" selection-end="2601" vertical-scroll-proportion="0.3774436">
+        <state line="58" column="48" selection-start="2601" selection-end="2601" vertical-scroll-proportion="-9.653846">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/order.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="49" column="32" selection-start="2360" selection-end="2360" vertical-scroll-proportion="0.75">
           <folding />
         </state>
       </provider>

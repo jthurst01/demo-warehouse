@@ -41,7 +41,7 @@
                         </tr>
                     </c:forEach>
                 </table>
-			    <a href="/orderui">Back</a> <input id="delete" type="submit" value="Delete" />
+                <button onclick="location.href='/orderui'">Back</button><input id="delete" type="submit" value="Delete" />
 			</div>
 		</div>	
 	</body>
