@@ -49,7 +49,7 @@ public class OrderUIController {
 		return getOrdersPage(model);
 	}
 
-	@RequestMapping(value="{orderId}", method=RequestMethod.GET)
+	@RequestMapping(value="{id}", method=RequestMethod.GET)
 	public String getOrderPage(@PathVariable String id, Model model) {
 		Order order = orderService.findOrder(id);
 		if (order == null) {
