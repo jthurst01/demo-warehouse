@@ -24,15 +24,23 @@
                 <p>Order Id: <c:out value="${order.orderId}"/></p>
                 <p>Total: <c:out value="${order.total}"/></p>
                 <p>Status: <c:out value="${order.status}"/></p>
-                <p>Line Items:</p>
-                <c:forEach items="${order.lineItems}" var="li">
-                    <p>Id: <c:out value="${li.id}"/></p>
-                    <p>Line Item Id: <c:out value="${li.lineItemId}"/></p>
-                    <p>Quantity: <c:out value="${li.quantity}"/></p>
-                    <p>Unit Price: <c:out value="${li.unitPrice}"/></p>
-                    <p>Total: <c:out value="${li.total}"/></p>
-                    <p>Item: <c:out value="${li.item}"/></p>
-                </c:forEach>
+
+                <h2>
+                    Line Items
+                </h2>
+                <table>
+                    <tr><th>ID</th><th>LIne Item ID</th><th>Quantity</th><th>Unit Price</th><th>Total</th><th>Item</th></tr>
+                    <c:forEach items="${order.lineItems}" var="li">
+                        <tr>
+                            <td><c:out value="${li.id}"/></td>
+                            <td><c:out value="${li.lineItemId}"/></td>
+                            <td><c:out value="${li.quantity}"/></td>
+                            <td><c:out value="${li.unitPrice}"/></td>
+                            <td><c:out value="${li.total}"/></td>
+                            <td><c:out value="${li.item}"/></td>
+                        </tr>
+                    </c:forEach>
+                </table>
 			    <a href="/orderui">Back</a> <input id="delete" type="submit" value="Delete" />
 			</div>
 		</div>	

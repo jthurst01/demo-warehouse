@@ -205,19 +205,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="order.jsp" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="order.jsp" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/order.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="14" selection-start="1464" selection-end="1464" vertical-scroll-proportion="-18.125">
+            <state line="13" column="62" selection-start="725" selection-end="725" vertical-scroll-proportion="0.2867647">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OrderUIController.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="OrderUIController.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/force/example/fulfillment/order/controller/OrderUIController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="31" selection-start="686" selection-end="686" vertical-scroll-proportion="0.40601504">
+            <state line="18" column="31" selection-start="686" selection-end="686" vertical-scroll-proportion="-10.384615">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -228,14 +228,8 @@
       <file leaf-file-name="orders.jsp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/orders.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="0" selection-start="28" selection-end="28" vertical-scroll-proportion="-0.625">
-              <folding>
-                <marker date="1358297538000" expanded="true" signature="2004:2470" placeholder="{...}" />
-                <marker date="1358297538000" expanded="true" signature="2039:2464" placeholder="{...}" />
-                <marker date="1358297538000" expanded="true" signature="2132:2330" placeholder="{...}" />
-                <marker date="1358297538000" expanded="true" signature="2198:2322" placeholder="{...}" />
-                <marker date="1358297538000" expanded="true" signature="2347:2439" placeholder="{...}" />
-              </folding>
+            <state line="41" column="0" selection-start="1247" selection-end="1921" vertical-scroll-proportion="-25.625">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -1025,19 +1019,6 @@
         <state line="40" column="0" selection-start="1210" selection-end="1210" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/orders.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="28" selection-end="28" vertical-scroll-proportion="-0.625">
-          <folding>
-            <marker date="1358297538000" expanded="true" signature="2004:2470" placeholder="{...}" />
-            <marker date="1358297538000" expanded="true" signature="2039:2464" placeholder="{...}" />
-            <marker date="1358297538000" expanded="true" signature="2132:2330" placeholder="{...}" />
-            <marker date="1358297538000" expanded="true" signature="2198:2322" placeholder="{...}" />
-            <marker date="1358297538000" expanded="true" signature="2347:2439" placeholder="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/force/example/fulfillment/order/model/Order.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="87" column="21" selection-start="1788" selection-end="1809" vertical-scroll-proportion="0.0">
@@ -1054,19 +1035,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/order.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/force/example/fulfillment/order/controller/OrderUIController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="14" selection-start="1464" selection-end="1464" vertical-scroll-proportion="-18.125">
+        <state line="18" column="31" selection-start="686" selection-end="686" vertical-scroll-proportion="-10.384615">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/orders.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="41" column="0" selection-start="1247" selection-end="1921" vertical-scroll-proportion="-25.625">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/force/example/fulfillment/order/controller/OrderUIController.java">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/order.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="31" selection-start="686" selection-end="686" vertical-scroll-proportion="0.40601504">
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state line="13" column="62" selection-start="725" selection-end="725" vertical-scroll-proportion="0.2867647">
+          <folding />
         </state>
       </provider>
     </entry>
