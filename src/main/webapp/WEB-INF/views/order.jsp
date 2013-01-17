@@ -50,19 +50,24 @@
 
             function localUpdateHandler(data){
                 console.log("Status from remote salesforce call:", data);
-                // Update local Order status.
-                $.ajax({
-                    url : "/order/${order.id}",
-                    type: "PUT",
-                    data: JSON.stringify({status:"shipped"}),
-                    success: function() {
-                        document.location.reload(true);
-                    },
-                    error: function(){
+                if (data.status === 200 || data.status === 204){
+                  // Update local Order status.
+                  $.ajax({
+                      url : "/order/${order.id}",
+                      type: "PUT",
+                      data: JSON.stringify({status:"shipped"}),
+                      success: function() {
+                          document.location.reload(true);
+                      },
+                      error: function(){
                         alert("Error occurred updating local status.");
-                    },
-                    contentType:"application/json"
-                });
+                      },
+                      contentType:"application/json"
+                  });
+                }
+                else{
+                    alert("Remote call to salesforce failed. Status: "+data.status+", Text: " + data.statusText);
+                }
             }
         </script>
 
