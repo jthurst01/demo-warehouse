@@ -19,9 +19,6 @@
             var sr = JSON.parse('"${not empty signedRequestJson?signedRequestJson:'{}'}"');
         </c:set>
         <script>
-            if (self != top) {
-                // Not in Iframe, enable finalize
-            }
             var sr =  JSON.parse('${not empty signedRequestJson?signedRequestJson:"{}"}');
             Sfdc.canvas(function() {
                 // Setup the finalize
@@ -36,7 +33,7 @@
             });
 
             function finalizeHandler(){
-                var invoiceUri="/services/data/v26.0/sobjects/Order__c/${order.id}";
+                var invoiceUri=sr.context.links.sobjectUrl + "Order__c/${order.id}";
                 var body = {"status__c":"shipped"};
 
                 Sfdc.canvas.client.ajax(invoiceUri,{
