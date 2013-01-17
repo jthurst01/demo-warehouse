@@ -220,10 +220,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="order.jsp" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="order.jsp" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/order.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="21" selection-start="113" selection-end="113" vertical-scroll-proportion="-1.25">
+            <state line="30" column="0" selection-start="1384" selection-end="1384" vertical-scroll-proportion="0.6617647">
               <folding />
             </state>
           </provider>
@@ -269,10 +269,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="orders.jsp" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="orders.jsp" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/orders.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="22" selection-start="22" selection-end="22" vertical-scroll-proportion="-0.19190405">
+            <state line="0" column="22" selection-start="22" selection-end="22" vertical-scroll-proportion="5.3333335">
               <folding />
             </state>
           </provider>
@@ -336,8 +336,8 @@
         <option value="$PROJECT_DIR$/src/main/webapp/resources/blueprint/screen.css" />
         <option value="$PROJECT_DIR$/src/main/java/com/force/example/fulfillment/order/controller/OrderController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/force/example/fulfillment/order/controller/OrderUIController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/order.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/orders.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/order.jsp" />
       </list>
     </option>
   </component>
@@ -1071,13 +1071,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/force/example/fulfillment/order/service/OrderServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="0" selection-start="451" selection-end="451" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/force/example/fulfillment/order/service/InvoiceServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="40" column="0" selection-start="1210" selection-end="1210" vertical-scroll-proportion="0.0" />
@@ -1131,16 +1124,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/order.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/force/example/fulfillment/order/service/OrderServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="21" selection-start="113" selection-end="113" vertical-scroll-proportion="-1.25">
+        <state line="15" column="0" selection-start="451" selection-end="451" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/orders.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="22" selection-start="22" selection-end="22" vertical-scroll-proportion="-0.19190405">
+        <state line="0" column="22" selection-start="22" selection-end="22" vertical-scroll-proportion="5.3333335">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/order.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="0" selection-start="1384" selection-end="1384" vertical-scroll-proportion="0.6617647">
           <folding />
         </state>
       </provider>
