@@ -17,10 +17,15 @@ public class OrderServiceImpl implements OrderService {
 
     @PersistenceContext
     EntityManager em;
-        
+
     @Transactional
 	public void addOrder(Order order) {
         em.persist(order);
+    }
+
+    @Transactional
+    public void updateOrder(Order order){
+        em.merge(order);
     }
 
 	public List<Order> listOrders() {
@@ -32,7 +37,7 @@ public class OrderServiceImpl implements OrderService {
 	public Order findOrder(String id) {
 		return em.find(Order.class, id);
 	}
-	
+
     @Transactional
 	public void removeOrder(String id) {
 		Order order = em.find(Order.class, id);

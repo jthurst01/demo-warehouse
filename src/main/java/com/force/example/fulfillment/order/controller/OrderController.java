@@ -23,17 +23,17 @@ import com.force.example.fulfillment.order.service.OrderService;
 @Controller
 @RequestMapping(value="/order")
 public class    OrderController {
-	
+
 	@Autowired
 	private OrderService orderService;
-	
+
 	private Validator validator;
-	
+
 	@Autowired
 	public OrderController(Validator validator) {
 		this.validator = validator;
 	}
-	
+
 	@RequestMapping(method=RequestMethod.POST)
 	public @ResponseBody List<? extends Object> create(@Valid @RequestBody Order[] orders, HttpServletResponse response) {
 		boolean failed = false;
@@ -42,8 +42,8 @@ public class    OrderController {
 			Set<ConstraintViolation<Order>> failures = validator.validate(order);
 			if (failures.isEmpty()) {
 				Map<String, String> failureMessageMap = new HashMap<String, String>();
-				if (! orderService.findOrderById(order.getId()).isEmpty()) {					
-					failureMessageMap.put("id", "id already exists in database");					
+				if (! orderService.findOrderById(order.getId()).isEmpty()) {
+					failureMessageMap.put("id", "id already exists in database");
 					failed = true;
 				}
 				failureList.add(failureMessageMap);
@@ -68,7 +68,20 @@ public class    OrderController {
 			return responseList;
 		}
 	}
-	
+
+    @RequestMapping(value="{id}",method=RequestMethod.PUT)
+    public @ResponseBody Order updateOrder(@PathVariable String id, @RequestBody Order order) {
+        Order orderToUpdate = orderService.findOrder(id);
+        if (orderToUpdate == null) {
+            throw new ResourceNotFoundException(id);
+        }
+        if (order.getStatus() != null){
+            orderToUpdate.setStatus(order.getStatus());
+            orderService.updateOrder(orderToUpdate);
+        }
+        return orderToUpdate;
+    }
+
 	@RequestMapping(method=RequestMethod.GET)
 	public @ResponseBody List<Order> getOrders() {
         List<Order> lo = orderService.listOrders();
@@ -82,21 +95,21 @@ public class    OrderController {
         return lo2;
 	}
 
-	@RequestMapping(value="{orderId}", method=RequestMethod.GET)
+	@RequestMapping(value="{id}", method=RequestMethod.GET)
 	public @ResponseBody Order getOrder(@PathVariable String id) {
 		Order order = orderService.findOrder(id);
 		if (order == null) {
 			throw new ResourceNotFoundException(id);
 		}
-		return order;
+		return order.toJsonFriendly();
 	}
-	
-	@RequestMapping(value="{orderId}", method=RequestMethod.DELETE)
+
+	@RequestMapping(value="{id}", method=RequestMethod.DELETE)
 	@ResponseStatus(HttpStatus.OK)
 	public void deleteOrder(@PathVariable String id) {
 		orderService.removeOrder(id);
 	}
-	
+
 	// internal helper
 	private Map<String, String> validationMessages(Set<ConstraintViolation<Order>> failureSet) {
 		Map<String, String> failureMessageMap = new HashMap<String, String>();

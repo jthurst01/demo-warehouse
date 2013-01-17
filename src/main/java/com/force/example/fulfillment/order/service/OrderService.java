@@ -10,4 +10,5 @@ public interface OrderService {
     public Order findOrder(String orderId);
     public void removeOrder(String orderId);
 	List<Order> findOrderById(String id);
+	public void updateOrder(Order order);
 }

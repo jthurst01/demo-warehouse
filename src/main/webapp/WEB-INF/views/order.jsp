@@ -14,6 +14,29 @@
 		<link rel="stylesheet" href="<c:url value="/resources/popup.css" />" type="text/css" media="screen, projection">
 		<script type="text/javascript" src="<c:url value="/resources/jquery-1.4.min.js" /> "></script>
 		<script type="text/javascript" src="<c:url value="/resources/json.min.js" /> "></script>
+        <script>
+            if (self != top) {
+                // Not in Iframe, enable finalize
+            }
+
+            function finalizeOrder(){
+                // Update local Order status.
+                $.ajax({
+                    url : "/order/${order.id}",
+                    type: "PUT",
+                    data: JSON.stringify({status:"Closed"}),
+                    success: function() {
+                        document.location.reload(true);
+                    },
+                    error: function(){
+                        alert("Error occurred.");
+                    },
+                    contentType:"application/json"
+                });
+            }
+        </script>
+
+
 	</head>
 	<body>
 		<div class="container">
@@ -41,9 +64,12 @@
                         </tr>
                     </c:forEach>
                 </table>
-			    <a href="/orderui">Back</a> <input id="delete" type="submit" value="Delete" />
+			    <a href="/orderui">Back</a>
+			    <c:if test="${order.status ne 'Closed'}">
+			         <input id="finalize" type="submit" value="Finalize" onClick="finalizeOrder();"/>
+                </c:if>
 			</div>
-		</div>	
+		</div>
 	</body>
 	<%--<script>--%>
 	<%--$("#delete").click(function() {--%>
