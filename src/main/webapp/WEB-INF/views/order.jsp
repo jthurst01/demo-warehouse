@@ -37,22 +37,19 @@
 
             function finalizeHandler(){
                 var invoiceUri="/services/data/v26.0/sobjects/Order__c/${order.id}";
-                var body = {"status__c":"pending"};
+                var body = {"status__c":"shipped"};
 
                 Sfdc.canvas.client.ajax(invoiceUri,{
                         token : sr.oauthToken,
                         method: 'PATCH',
-                        async: true,
                         contentType: "application/json",
                         data: JSON.stringify(body),
-                        success : localUpdateHandler,
-                        failure : function(data){
-                            alert("Unable to update remote invoice object with id ${order.id}");
-                        }
+                        success : localUpdateHandler
                 });
             }
 
-            function localUpdateHandler(){
+            function localUpdateHandler(data){
+                console.log("Status from remote salesforce call:", data);
                 // Update local Order status.
                 $.ajax({
                     url : "/order/${order.id}",
