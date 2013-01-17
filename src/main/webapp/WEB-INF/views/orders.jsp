@@ -1,4 +1,4 @@
-<%@ page session="false" %>
+<%@ page session="true" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
@@ -7,7 +7,7 @@
 	<head>
 		<title>Orders</title>
 		<link rel="stylesheet" href="<c:url value="/resources/blueprint/screen.css" />" type="text/css" media="screen, projection">
-		<link rel="stylesheet" href="<c:url value="/resources/blueprint/print.css" />" type="text/css" media="print">
+		<%--<link rel="stylesheet" href="<c:url value="/resources/blueprint/print.css" />" type="text/css" media="print">--%>
 		<!--[if lt IE 8]>
 			<link rel="stylesheet" href="<c:url value="/resources/blueprint/ie.css" />" type="text/css" media="screen, projection">
 		<![endif]-->
@@ -17,7 +17,7 @@
 
         <c:if test="${not empty signedRequestJson}">
           <script type="text/javascript"/>
-            var signedRequest = JSON.parse("${signedRequestJson}");
+            var signedRequest = JSON.parse('${signedRequestJson}');
           </script>
         </c:if>
 	</head>
