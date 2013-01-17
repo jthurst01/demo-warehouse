@@ -15,9 +15,6 @@
 		<script type="text/javascript" src="<c:url value="/resources/jquery-1.4.min.js" /> "></script>
         <script type="text/javascript" src="<c:url value="/resources/json.min.js" /> "></script>
         <script type="text/javascript" src="<c:url value="/resources/canvas-all.js" /> "></script>
-        <c:set scope="request" var="srVar">
-            var sr = JSON.parse('"${not empty signedRequestJson?signedRequestJson:'{}'}"');
-        </c:set>
         <script>
             var sr =  JSON.parse('${not empty signedRequestJson?signedRequestJson:"{}"}');
             Sfdc.canvas(function() {
