@@ -31,7 +31,7 @@
 
             function finalizeHandler(){
                 var invoiceUri=sr.context.links.sobjectUrl + "Order__c/${order.id}";
-                var body = {"status__c":"shipped"};
+                var body = {"status__c":"Shipped"};
 
                 Sfdc.canvas.client.ajax(invoiceUri,{
                         token : sr.oauthToken,
@@ -49,7 +49,7 @@
                   $.ajax({
                       url : "/order/${order.id}",
                       type: "PUT",
-                      data: JSON.stringify({status:"shipped"}),
+                      data: JSON.stringify({status:"Shipped"}),
                       success: function() {
                           document.location.reload(true);
                       },
