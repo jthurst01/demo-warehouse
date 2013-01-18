@@ -31,7 +31,7 @@
 
             function finalizeHandler(){
                 var invoiceUri=sr.context.links.sobjectUrl + "Order__c/${order.id}";
-                var body = {"status__c":"Shipped"};
+                var body = {"status__c":"shipped"};
 
                 Sfdc.canvas.client.ajax(invoiceUri,{
                         token : sr.oauthToken,
@@ -49,7 +49,7 @@
                   $.ajax({
                       url : "/order/${order.id}",
                       type: "PUT",
-                      data: JSON.stringify({status:"Shipped"}),
+                      data: JSON.stringify({status:"shipped"}),
                       success: function() {
                           document.location.reload(true);
                       },
@@ -63,6 +63,10 @@
                     alert("Remote call to salesforce failed. Status: "+data.status+", Text: " + data.statusText);
                 }
             }
+            
+            function getRoot() {
+            	return sr.instanceUrl;
+            }
         </script>
 
 
@@ -70,7 +74,7 @@
 	<body>
 		<div class="container">
 			<h2>
-				Order <c:out value="${order.id}"/>
+				Order <a href="#" onclick="window.top.location.href = getRoot() + '/${order.id}';"> <c:out value="${order.id}"/> </a>
 			</h2>
 			<div class="span-12 last">
                 <p>Order Id: <c:out value="${order.orderId}"/></p>
@@ -84,7 +88,7 @@
                     <tr><th>ID</th><th>Line Item ID</th><th>Quantity</th><th>Unit Price</th><th>Total</th><th>Item</th></tr>
                     <c:forEach items="${order.lineItems}" var="li">
                         <tr>
-                            <td><c:out value="${li.id}"/></td>
+                            <td><a href="#" onclick="window.top.location.href = getRoot() + '/${li.id}';"><c:out value="${li.id}"/></a></td>
                             <td><c:out value="${li.lineItemId}"/></td>
                             <td><c:out value="${li.quantity}"/></td>
                             <td><c:out value="${li.unitPrice}"/></td>
