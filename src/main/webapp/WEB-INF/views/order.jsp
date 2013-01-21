@@ -65,7 +65,7 @@
             }
             
             function getRoot() {
-            	return sr.instanceUrl;
+            	return sr.client.instanceUrl;
             }
         </script>
 
