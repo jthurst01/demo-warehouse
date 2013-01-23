@@ -19,7 +19,7 @@
             var sr =  JSON.parse('${not empty signedRequestJson?signedRequestJson:"{}"}');
             Sfdc.canvas(function() {
                 // Setup the finalize
-                if (sr.oauthToken){
+                if (sr.client.oauthToken){
                     $('#finalizeButton').click(finalizeHandler);
                     $('#finalizeButton').show();
                 }
@@ -98,9 +98,9 @@
                     </c:forEach>
                 </table>
                 <button onclick="location.href='/orderui'">Back</button>
-			    <c:if test="${order.status ne 'shipped'}">
+			    <!--<c:if test="${order.status ne 'shipped'}">-->
                     <button id="finalizeButton">Finalize</button>
-                </c:if>
+                <!--</c:if>-->
 			</div>
 		</div>
 	</body>
