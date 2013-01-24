@@ -34,7 +34,7 @@
                 var body = {"Status__c":"Shipped"};
                           alert(sr.client.instanceId);
                 Sfdc.canvas.client.ajax(invoiceUri,{
-                        token : sr.client,
+                        client : sr.client,
                         method: 'PATCH',
                         contentType: "application/json",
                         data: JSON.stringify(body),
