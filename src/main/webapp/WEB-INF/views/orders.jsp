@@ -24,7 +24,7 @@
 	</head>
 	<body>
 		<div class="container">
-			<pre id="srjson />
+			<pre id="srjson" />
 			<h2>
 				Existing Orders
 			</h2>

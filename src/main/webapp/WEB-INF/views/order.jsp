@@ -74,7 +74,7 @@
 	</head>
 	<body>
 		<div class="container">
-			<pre id="srjson />
+			<pre id="srjson" />
 			<h2>
 				Order <a href="#" onclick="window.top.location.href = getRoot() + '/${order.id}';"> <c:out value="${order.id}"/> </a>
 			</h2>
