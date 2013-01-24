@@ -44,10 +44,11 @@ public class    OrderController {
 			if (failures.isEmpty()) {
 				Map<String, String> failureMessageMap = new HashMap<String, String>();
 				if (! orderService.findOrderById(order.getId()).isEmpty()) {
-					failureMessageMap.put("id", "id already exists in database");
-					failed = true;
+					//failureMessageMap.put("id", "id already exists in database");
+					//failed = true;
+                    updateOrder(order.getId(), order);
 				}
-				failureList.add(failureMessageMap);
+				//failureList.add(failureMessageMap);
 			} else {
 				failureList.add(validationMessages(failures));
 				failed = true;
