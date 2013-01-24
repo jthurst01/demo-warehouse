@@ -86,7 +86,7 @@ public class Order {
 //            nli.setOrder(o);
             nli.setOrder(this);
             lis.add(nli);
-            System.out.println(nli.toJsonFriendly());
+            System.out.println("------------HERE-----------" + nli.toJsonFriendly());
         }
         this.lineItems = lis;
     }
