@@ -18,13 +18,11 @@
         <c:if test="${not empty signedRequestJson}">
           <script type="text/javascript"/>
             var signedRequest = JSON.parse('${signedRequestJson}');
-            $('srjson').html(signedRequest);
           </script>
         </c:if>
 	</head>
 	<body>
 		<div class="container">
-			<pre id="srjson" />
 			<h2>
 				Existing Orders
 			</h2>

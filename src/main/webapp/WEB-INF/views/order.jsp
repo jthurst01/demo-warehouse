@@ -17,7 +17,6 @@
         <script type="text/javascript" src="<c:url value="/resources/canvas-all.js" /> "></script>
         <script>
             var sr =  JSON.parse('${not empty signedRequestJson?signedRequestJson:"{}"}');
-            $('srjson').html(sr);
             Sfdc.canvas(function() {
                 // Setup the finalize
                 if (sr.client.oauthToken){
@@ -35,7 +34,7 @@
                 var body = {"status__c":"shipped"};
 
                 Sfdc.canvas.client.ajax(invoiceUri,{
-                        token : sr.oauthToken,
+                        token : sr.client.oauthToken,
                         method: 'PATCH',
                         contentType: "application/json",
                         data: JSON.stringify(body),
@@ -74,7 +73,6 @@
 	</head>
 	<body>
 		<div class="container">
-			<pre id="srjson" />
 			<h2>
 				Order <a href="#" onclick="window.top.location.href = getRoot() + '/${order.id}';"> <c:out value="${order.id}"/> </a>
 			</h2>
