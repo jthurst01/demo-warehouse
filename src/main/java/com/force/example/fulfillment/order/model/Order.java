@@ -37,7 +37,7 @@ public class Order {
 		return orderId;
 	}
 
-	void setOrderId(String orderId) {
+	public void setOrderId(String orderId) {
 		this.orderId = orderId;
 	}
 
@@ -86,7 +86,7 @@ public class Order {
 //            nli.setOrder(o);
             nli.setOrder(this);
             lis.add(nli);
-            System.out.println("------------HERE-----------" + nli.toJsonFriendly());
+            System.out.println("------------HERE-----------" + nli.toJsonFriendly().toString());
         }
         this.lineItems = lis;
     }

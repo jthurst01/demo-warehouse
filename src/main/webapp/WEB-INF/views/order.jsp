@@ -48,7 +48,7 @@
                   $.ajax({
                       url : "/order/${order.id}",
                       type: "PUT",
-                      data: JSON.stringify({status:"Shipped"}),
+                      data: JSON.stringify({status:"Shipped", orderId:"${order.orderId}", total:"${order.total}"}),
                       success: function() {
                           document.location.reload(true);
                       },

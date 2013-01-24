@@ -7,6 +7,7 @@ import javax.validation.ConstraintViolation;
 import javax.validation.Valid;
 import javax.validation.Validator;
 
+import com.force.example.fulfillment.order.model.LineItem;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
@@ -79,6 +80,8 @@ public class    OrderController {
         }
         if (order.getStatus() != null){
             orderToUpdate.setStatus(order.getStatus());
+            orderToUpdate.setOrderId(order.getOrderId());
+            orderToUpdate.setTotal(order.getTotal());
             orderService.updateOrder(orderToUpdate);
         }
         return orderToUpdate;
