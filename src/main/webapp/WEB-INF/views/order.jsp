@@ -30,8 +30,8 @@
             });
 
             function finalizeHandler(){
-                var invoiceUri=sr.context.links.sobjectUrl + "Order__c/${order.id}";
-                var body = {"status__c":"shipped"};
+                var invoiceUri=sr.context.links.sobjectUrl + "Invoice_Statement__c/${order.id}";
+                var body = {"Status__c":"Shipped"};
 
                 Sfdc.canvas.client.ajax(invoiceUri,{
                         token : sr.client.oauthToken,
@@ -49,7 +49,7 @@
                   $.ajax({
                       url : "/order/${order.id}",
                       type: "PUT",
-                      data: JSON.stringify({status:"shipped"}),
+                      data: JSON.stringify({status:"Shipped"}),
                       success: function() {
                           document.location.reload(true);
                       },
@@ -98,7 +98,7 @@
                     </c:forEach>
                 </table>
                 <button onclick="location.href='/orderui'">Back</button>
-			    <!--<c:if test="${order.status ne 'shipped'}">-->
+			    <!--<c:if test="${order.status ne 'Shipped'}">-->
                     <button id="finalizeButton">Finalize</button>
                 <!--</c:if>-->
 			</div>
