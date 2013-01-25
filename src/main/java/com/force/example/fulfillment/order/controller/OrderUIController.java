@@ -49,7 +49,7 @@ public class OrderUIController {
         CanvasEnvironmentContext ce = cc.getEnvironmentContext();
         System.out.println("=====Canvas Environment: " + ce.toString());
         System.out.println("=====Parameters: " + ce.getSRParameters().toString());
-        if(ce.getSRParameters() == null) {
+        if(ce.getSRParameters().toString().isEmpty()) {
             System.out.println("=====In Null");
             return getOrdersPage(model);
         } else {
