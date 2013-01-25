@@ -179,7 +179,7 @@ public class CanvasEnvironmentContext {
     @JsonIgnoreProperties(ignoreUnknown=true)
     public static class SRParameters{
 
-        private String orderId;
+        private String orderId = null;
 
         @JsonProperty("orderId")
         public String getOrderId() {
@@ -192,7 +192,12 @@ public class CanvasEnvironmentContext {
 
         @Override
         public String toString(){
-            return String.format("%s",orderId);
+            if(null == orderId) {
+                return String.format("noparams");
+            }
+            else {
+                return String.format("%s",orderId);
+            }
         }
     }
 
