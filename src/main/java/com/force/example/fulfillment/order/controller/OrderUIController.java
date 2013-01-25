@@ -51,7 +51,7 @@ public class OrderUIController {
         System.out.println("=====Canvas Environment: " + ce.toString());
         System.out.println("=====Parameters: " + ce.getSRParameters().toString());
         System.out.println("=====temp: " + temp);
-        if(temp != "noparams") {
+        if(!temp.startsWith("a")) {
             System.out.println("=====In Null");
             return getOrdersPage(model);
         } else {
