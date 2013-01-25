@@ -39,13 +39,6 @@ public class OrderUIController {
 		this.validator = validator;
 	}
 
-	@RequestMapping(method=RequestMethod.GET)
-	public String getOrdersPage(Model model) {
-		model.addAttribute("order", new Order());
-		model.addAttribute("orders", orderService.listOrders());
-		return "orders";
-	}
-
 	@RequestMapping(method=RequestMethod.POST)
 	public String postSignedRequest(Model model,@RequestParam(value="signed_request")String signedRequest, HttpServletRequest request){
 	    String srJson = SignedRequest.verifyAndDecodeAsJson(signedRequest, getConsumerSecret());
@@ -56,12 +49,19 @@ public class OrderUIController {
         CanvasEnvironmentContext ce = cc.getEnvironmentContext();
         System.out.println("=====Canvas Environment: " + ce.toString());
         System.out.println("=====Parameters: " + ce.getSRParameters().toString());
-        if(ce.getSRParameters().toString() == null) {
+        if(ce.getSRParameters().toString() == null || ce.getSRParameters().toString().isEmpty()) {
             return getOrdersPage(model);
         } else {
             return getOrderPage(ce.getSRParameters().toString(), model);
         }
 	}
+
+    @RequestMapping(method=RequestMethod.GET)
+    public String getOrdersPage(Model model) {
+        model.addAttribute("order", new Order());
+        model.addAttribute("orders", orderService.listOrders());
+        return "orders";
+    }
 
 	@RequestMapping(value="{id}", method=RequestMethod.GET)
 	public String getOrderPage(@PathVariable String id, Model model) {
