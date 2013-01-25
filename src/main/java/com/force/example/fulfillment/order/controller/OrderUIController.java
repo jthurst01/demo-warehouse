@@ -47,9 +47,11 @@ public class OrderUIController {
         session.setAttribute(SIGNED_REQUEST, srJson);
         CanvasContext cc = cr.getContext();
         CanvasEnvironmentContext ce = cc.getEnvironmentContext();
+        String temp = ce.getSRParameters().toString();
         System.out.println("=====Canvas Environment: " + ce.toString());
         System.out.println("=====Parameters: " + ce.getSRParameters().toString());
-        if(ce.getSRParameters().toString() == "noparams") {
+        System.out.println("=====temp: " + temp);
+        if(temp == "noparams") {
             System.out.println("=====In Null");
             return getOrdersPage(model);
         } else {
