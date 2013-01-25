@@ -50,14 +50,17 @@ public class OrderUIController {
         System.out.println("=====Canvas Environment: " + ce.toString());
         System.out.println("=====Parameters: " + ce.getSRParameters().toString());
         if(ce.getSRParameters().toString() == null || ce.getSRParameters().toString().isEmpty()) {
+            System.out.println("=====In Null");
             return getOrdersPage(model);
         } else {
+            System.out.println("=====In Not Null");
             return getOrderPage(ce.getSRParameters().toString(), model);
         }
 	}
 
     @RequestMapping(method=RequestMethod.GET)
     public String getOrdersPage(Model model) {
+        System.out.println("=====In getOrdersPage");
         model.addAttribute("order", new Order());
         model.addAttribute("orders", orderService.listOrders());
         return "orders";
@@ -65,6 +68,7 @@ public class OrderUIController {
 
 	@RequestMapping(value="{id}", method=RequestMethod.GET)
 	public String getOrderPage(@PathVariable String id, Model model) {
+        System.out.println("=====In getOrderPage");
 		Order order = orderService.findOrder(id);
 		if (order == null) {
 			//throw new ResourceNotFoundException(id);
