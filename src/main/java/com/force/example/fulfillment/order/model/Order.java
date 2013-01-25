@@ -79,14 +79,8 @@ public class Order {
             nli.setQuantity(li.getQuantity());
             nli.setTotal(li.getTotal());
             nli.setUnitPrice(li.getUnitPrice());
-
-//            Order o = new Order();
-//            o.setOrderId(this.getOrderId());
-//            o.setId(this.getId());
-//            nli.setOrder(o);
             nli.setOrder(this);
             lis.add(nli);
-            System.out.println("------------HERE-----------" + nli.toJsonFriendly().toString());
         }
         this.lineItems = lis;
     }

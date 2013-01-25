@@ -4,6 +4,12 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import javax.validation.Validator;
 
+import canvas.CanvasContext;
+import canvas.CanvasEnvironmentContext;
+import canvas.CanvasRequest;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -43,16 +49,27 @@ public class OrderUIController {
 	@RequestMapping(method=RequestMethod.POST)
 	public String postSignedRequest(Model model,@RequestParam(value="signed_request")String signedRequest, HttpServletRequest request){
 	    String srJson = SignedRequest.verifyAndDecodeAsJson(signedRequest, getConsumerSecret());
+        CanvasRequest cr = SignedRequest.verifyAndDecode(signedRequest, getConsumerSecret());
         HttpSession session = request.getSession(true);
         session.setAttribute(SIGNED_REQUEST, srJson);
-		return getOrdersPage(model);
+        CanvasContext cc = cr.getContext();
+        CanvasEnvironmentContext ce = cc.getEnvironmentContext();
+        System.out.println("=====Canvas Environment: " + ce.toString());
+        System.out.println("=====Parameters: " + ce.getSRParameters().toString());
+        if(ce.getSRParameters().toString() == null) {
+            return getOrdersPage(model);
+        } else {
+            return getOrderPage(ce.getSRParameters().toString(), model);
+        }
 	}
 
 	@RequestMapping(value="{id}", method=RequestMethod.GET)
 	public String getOrderPage(@PathVariable String id, Model model) {
 		Order order = orderService.findOrder(id);
 		if (order == null) {
-			throw new ResourceNotFoundException(id);
+			//throw new ResourceNotFoundException(id);
+            model.addAttribute("ordernf", order);
+            return "ordernf";
 		}
 		model.addAttribute("order", order);
 

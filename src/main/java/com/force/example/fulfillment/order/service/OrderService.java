@@ -1,8 +1,10 @@
 package com.force.example.fulfillment.order.service;
 
+import com.force.example.fulfillment.order.model.LineItem;
 import com.force.example.fulfillment.order.model.Order;
 
 import java.util.List;
+import java.util.Set;
 
 public interface OrderService {
     public void addOrder(Order order);

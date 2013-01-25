@@ -1,8 +1,10 @@
 package com.force.example.fulfillment.order.service;
 
+import com.force.example.fulfillment.order.model.LineItem;
 import com.force.example.fulfillment.order.model.Order;
 
 import java.util.List;
+import java.util.Set;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -24,8 +26,18 @@ public class OrderServiceImpl implements OrderService {
     }
 
     @Transactional
+    public void addLineItem(LineItem li) {
+        em.persist(li);
+    }
+
+    @Transactional
     public void updateOrder(Order order){
         em.merge(order);
+    }
+
+    @Transactional
+    public void updateLineItem(LineItem li){
+        em.merge(li);
     }
 
 	public List<Order> listOrders() {
@@ -37,6 +49,10 @@ public class OrderServiceImpl implements OrderService {
 	public Order findOrder(String id) {
 		return em.find(Order.class, id);
 	}
+
+    public LineItem findLineItem(String id) {
+        return em.find(LineItem.class, id);
+    }
 
     @Transactional
 	public void removeOrder(String id) {
@@ -51,4 +67,10 @@ public class OrderServiceImpl implements OrderService {
 		    .setParameter("id", id)
 		    .getResultList();
 	}
+
+    public List<LineItem> findLineItemById(String id) {
+        return em.createQuery("SELECT l FROM LineItem l WHERE l.id = :id", LineItem.class)
+                .setParameter("id", id)
+                .getResultList();
+    }
 }

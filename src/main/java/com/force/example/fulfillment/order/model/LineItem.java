@@ -5,7 +5,6 @@
  */
 package com.force.example.fulfillment.order.model;
 
-
 import org.codehaus.jackson.annotate.JsonIgnore;
 import org.codehaus.jackson.annotate.JsonIgnoreProperties;
 
