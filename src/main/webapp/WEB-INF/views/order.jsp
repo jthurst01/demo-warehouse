@@ -72,7 +72,7 @@
 
 	</head>
 	<body>
-		<div class="container">
+		<div class="container"> 
 			<h2>
 				Order <a href="#" onclick="window.top.location.href = getRoot() + '/${order.id}';"> <c:out value="${order.id}"/> </a>
 			</h2>
