@@ -77,10 +77,11 @@
 				Order <a href="#" onclick="window.top.location.href = getRoot() + '/${order.id}';"> <c:out value="${order.id}"/> </a>
 			</h2>
 			<div class="span-12 last">
-                <p>Order Id: <c:out value="${order.orderId}"/></p>
-                <p>Total: <c:out value="${order.total}"/></p>
-                <p>Status: <c:out value="${order.status}"/></p>
-
+				<table>
+                <tr><td align="right"><b>Order Id:</b></td><td align="left"><c:out value="${order.orderId}"/></td></tr>
+                <tr><td align="right"><b>Total:</b></td><td align="left"><c:out value="${order.total}"/></td></tr>
+                <tr><td align="right"><b>Status:</b></td><td align="left"><c:out value="${order.status}"/></td></tr>
+				</table>
                 <h2>
                     Line Items
                 </h2>
@@ -98,9 +99,9 @@
                     </c:forEach>
                 </table>
                 <button onclick="location.href='/orderui'">Back</button>
-			    <!--<c:if test="${order.status ne 'shipped'}">-->
+			    <c:if test="${order.status ne 'Shipped'}">
                     <button id="finalizeButton">Finalize</button>
-                <!--</c:if>-->
+                </c:if>
 			</div>
 		</div>
 	</body>
