@@ -1,12 +1,15 @@
 package com.force.example.fulfillment.order.controller;
 
 import java.util.*;
+import java.util.List;
+import java.util.concurrent.atomic.AtomicReferenceArray;
 
 import javax.servlet.http.HttpServletResponse;
 import javax.validation.ConstraintViolation;
 import javax.validation.Valid;
 import javax.validation.Validator;
 
+import com.force.example.fulfillment.order.model.LineItem;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
@@ -38,16 +41,17 @@ public class    OrderController {
 	@RequestMapping(method=RequestMethod.POST)
 	public @ResponseBody List<? extends Object> create(@Valid @RequestBody Order[] orders, HttpServletResponse response) {
 		boolean failed = false;
+        Order[] newOrder = new Order[1];
 		List<Map<String, String>> failureList = new LinkedList<Map<String, String>>();
 		for (Order order: orders) {
 			Set<ConstraintViolation<Order>> failures = validator.validate(order);
 			if (failures.isEmpty()) {
 				Map<String, String> failureMessageMap = new HashMap<String, String>();
 				if (! orderService.findOrderById(order.getId()).isEmpty()) {
-					failureMessageMap.put("id", "id already exists in database");
-					failed = true;
+                    deleteOrder(order.getId());
+                    newOrder[0] = order;
+                    create(newOrder, response);
 				}
-				failureList.add(failureMessageMap);
 			} else {
 				failureList.add(validationMessages(failures));
 				failed = true;
@@ -78,6 +82,8 @@ public class    OrderController {
         }
         if (order.getStatus() != null){
             orderToUpdate.setStatus(order.getStatus());
+            orderToUpdate.setOrderId(order.getOrderId());
+            orderToUpdate.setTotal(order.getTotal());
             orderService.updateOrder(orderToUpdate);
         }
         return orderToUpdate;

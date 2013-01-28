@@ -30,11 +30,10 @@
             });
 
             function finalizeHandler(){
-                var invoiceUri=sr.context.links.sobjectUrl + "Order__c/${order.id}";
-                var body = {"status__c":"shipped"};
-
+                var invoiceUri=sr.context.links.sobjectUrl + "Invoice_Statement__c/${order.id}";
+                var body = {"Status__c":"Shipped"};
                 Sfdc.canvas.client.ajax(invoiceUri,{
-                        token : sr.client.oauthToken,
+                        client : sr.client,
                         method: 'PATCH',
                         contentType: "application/json",
                         data: JSON.stringify(body),
@@ -49,9 +48,10 @@
                   $.ajax({
                       url : "/order/${order.id}",
                       type: "PUT",
-                      data: JSON.stringify({status:"shipped"}),
+                      data: JSON.stringify({status:"Shipped", orderId:"${order.orderId}", total:"${order.total}"}),
                       success: function() {
-                          document.location.reload(true);
+                          //document.location.reload(true);
+                          window.top.location.href = getRoot() + "/${order.id}";
                       },
                       error: function(){
                         alert("Error occurred updating local status.");
@@ -76,7 +76,7 @@
 			<h2>
 				Order <a href="#" onclick="window.top.location.href = getRoot() + '/${order.id}';"> <c:out value="${order.id}"/> </a>
 			</h2>
-			<div class="span-12 last">
+			<div class="span-12 last"> 
 				<table>
                 <tr><td align="right"><b>Order Id:</b></td><td align="left"><c:out value="${order.orderId}"/></td></tr>
                 <tr><td align="right"><b>Total:</b></td><td align="left"><c:out value="${order.total}"/></td></tr>
