@@ -83,6 +83,10 @@
 				color: #4a4f5b;
 				font-weight: bold;
 			}
+			
+			.valueCol {
+				padding-left:10px;
+			}
 		</style>
 
 	</head>
@@ -93,9 +97,9 @@
 			</h2>
 			<div class="span-12 last"> 
 				<table id="myTable">
-                <tr><td class="myCol">Order Id:</td><td align="left"><c:out value="${order.orderId}"/></td></tr>
-                <tr><td class="myCol">Total:</td><td align="left"><c:out value="${order.total}"/></td></tr>
-                <tr><td class="myCol">Status:</td><td align="left"><c:out value="${order.status}"/></td></tr>
+                <tr><td class="myCol">Order Id:</td><td class="valueCol"><c:out value="${order.orderId}"/></td></tr>
+                <tr><td class="myCol">Total:</td><td class="valueCol"><c:out value="${order.total}"/></td></tr>
+                <tr><td class="myCol">Status:</td><td class="valueCol"><c:out value="${order.status}"/></td></tr>
 				</table>
                 <h2>
                     Line Items
