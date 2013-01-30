@@ -157,7 +157,7 @@
                     Line Items
                 </h2>
                 <table id="lineItemTable">
-                    <tr><th style="border-left:1px solid #CDCDCD;">ID</th><th>Line Item Name</th><th>Quantity</th><th>Unit Price</th><th>Total</th><th>Item</th></tr>
+                    <tr><th style="border-left:0px;">ID</th><th>Line Item Name</th><th>Quantity</th><th>Unit Price</th><th>Total</th><th style="border-right:0px;">Item</th></tr>
                     <c:forEach items="${order.lineItems}" var="li">
                         <tr class="myLineItemTableRow">
                             <td><a href="#" onclick="window.top.location.href = getRoot() + '/${li.id}';"><c:out value="${li.id}"/></a></td>
