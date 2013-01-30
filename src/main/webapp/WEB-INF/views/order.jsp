@@ -91,12 +91,12 @@
 			
 			#bodyDiv {
 				padding:20px;
+				padding-top: 0px;
 			}
 			
 			#lineItemTitle {
-				font-size: 1.3em;
+				font-size: 1.2em;
 				font-weight: bold;
-				padding-left: 10px;
 				padding-right: 10px;
 			}
 			
