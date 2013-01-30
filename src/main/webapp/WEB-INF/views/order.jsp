@@ -68,7 +68,20 @@
             	return sr.client.instanceUrl;
             }
         </script>
-
+		
+		<style>
+			#myTable {
+				padding: 0px 0px 4px 0px;
+			}
+			
+			#myTable td {
+				border-bottom: 1px solid #CDCDCD;
+			}
+			
+			.myCol {
+				text-align: right;
+			}
+		</style>
 
 	</head>
 	<body>
@@ -77,10 +90,10 @@
 				Order <a href="#" onclick="window.top.location.href = getRoot() + '/${order.id}';"> <c:out value="${order.id}"/> </a>
 			</h2>
 			<div class="span-12 last"> 
-				<table>
-                <tr><td align="right"><b>Order Id:</b></td><td align="left"><c:out value="${order.orderId}"/></td></tr>
-                <tr><td align="right"><b>Total:</b></td><td align="left"><c:out value="${order.total}"/></td></tr>
-                <tr><td align="right"><b>Status:</b></td><td align="left"><c:out value="${order.status}"/></td></tr>
+				<table id="myTable">
+                <tr><td class="myCol"><b>Order Id:</b></td><td align="left"><c:out value="${order.orderId}"/></td></tr>
+                <tr><td class="myCol"><b>Total:</b></td><td align="left"><c:out value="${order.total}"/></td></tr>
+                <tr><td class="myCol"><b>Status:</b></td><td align="left"><c:out value="${order.status}"/></td></tr>
 				</table>
                 <h2>
                     Line Items
