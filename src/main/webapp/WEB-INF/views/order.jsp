@@ -92,6 +92,11 @@
 			#bodyDiv {
 				padding:20px;
 			}
+			
+			#lineItemTitle {
+				font-size: 1.3em;
+				font-weight: bold;
+			}
 		</style>
 
 	</head>
@@ -107,11 +112,11 @@
                 <tr><td class="myCol">Total:</td><td class="valueCol"><c:out value="${order.total}"/></td></tr>
                 <tr><td class="myCol">Status:</td><td class="valueCol"><c:out value="${order.status}"/></td></tr>
 				</table>
-                <h2>
+                <h2 id="lineItemTitle">
                     Line Items
                 </h2>
-                <table>
-                    <tr><th>ID</th><th>Line Item ID</th><th>Quantity</th><th>Unit Price</th><th>Total</th><th>Item</th></tr>
+                <table id="lineItemTable">
+                    <tr><th>ID</th><th>Line Item Name</th><th>Quantity</th><th>Unit Price</th><th>Total</th><th>Item</th></tr>
                     <c:forEach items="${order.lineItems}" var="li">
                         <tr>
                             <td><a href="#" onclick="window.top.location.href = getRoot() + '/${li.id}';"><c:out value="${li.id}"/></a></td>
