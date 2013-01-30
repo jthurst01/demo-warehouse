@@ -5,6 +5,7 @@
 
 <html>
 	<head>
+
 		<title>Order</title>
 		<link rel="stylesheet" href="<c:url value="/resources/blueprint/screen.css" />" type="text/css" media="screen, projection">
 		<%--<link rel="stylesheet" href="<c:url value="/resources/blueprint/print.css" />" type="text/css" media="print">--%>
@@ -75,7 +76,7 @@
 			}
 			
 			#myTable td {
-				border-bottom: 1px solid #CDCDCD;
+				border-bottom: 1px solid #CCCCCC;
 			}
 			
 			.myCol {
@@ -87,10 +88,15 @@
 			.valueCol {
 				padding-left:10px;
 			}
+			
+			#bodyDiv {
+				padding:20px;
+			}
 		</style>
 
 	</head>
 	<body>
+		<div id="bodyDiv">
 		<div class="container"> 
 			<h2>
 				Order <a href="#" onclick="window.top.location.href = getRoot() + '/${order.id}';"> <c:out value="${order.id}"/> </a>
@@ -123,6 +129,7 @@
                 </c:if>
 			</div>
 		</div>
+		<div>
 	</body>
 	<%--<script>--%>
 	<%--$("#delete").click(function() {--%>
