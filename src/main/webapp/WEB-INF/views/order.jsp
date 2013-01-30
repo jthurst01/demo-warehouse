@@ -96,20 +96,36 @@
 			#lineItemTitle {
 				font-size: 1.3em;
 				font-weight: bold;
+				padding-left: 10px;
+				padding-right: 10px;
+				border: 1px solid #CCCCCC;
 			}
 			
 			#myPageBlockTable {
 				padding:5px;
 				background: #F8F8F8;
 				border: 1px solid #CDCDCD;
+				border-radius: 6px;
+				border-top: 3px solid #998c7c;
 			}
 			
 			#lineItemTable th {
 				background: #f2f3f3;
 				border: 1px solid #CDCDCD;
+				position: relative;
+				bottom: 2px;
+				padding-right: 5px;
+				left: -11px;
 				padding-left: 4px;
-				top: 2px;
-				bottom: 2px; 
+			}
+			
+			.span-12 {
+				width:600px;
+			}
+			
+			.myLineItemTableRow {
+				background: white;
+				border-bottom: 1px solid #CCCCCC;
 			}
 		</style>
 
@@ -134,7 +150,7 @@
                 <table id="lineItemTable">
                     <tr><th>ID</th><th>Line Item Name</th><th>Quantity</th><th>Unit Price</th><th>Total</th><th>Item</th></tr>
                     <c:forEach items="${order.lineItems}" var="li">
-                        <tr>
+                        <tr class="myLineItemTableRow">
                             <td><a href="#" onclick="window.top.location.href = getRoot() + '/${li.id}';"><c:out value="${li.id}"/></a></td>
                             <td><c:out value="${li.lineItemId}"/></td>
                             <td><c:out value="${li.quantity}"/></td>
