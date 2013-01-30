@@ -98,7 +98,6 @@
 				font-weight: bold;
 				padding-left: 10px;
 				padding-right: 10px;
-				border: 1px solid #CCCCCC;
 			}
 			
 			#myPageBlockTable {
@@ -109,22 +108,31 @@
 				border-top: 3px solid #998c7c;
 			}
 			
+			#lineItemTable {
+				border-right: 1px solid #CDCDCD;
+				border-left: 1px solid #CDCDCD;
+			}
+			
 			#lineItemTable th {
 				background: #f2f3f3;
 				border: 1px solid #CDCDCD;
 				position: relative;
 				bottom: 2px;
 				padding-right: 5px;
-				left: -11px;
 				padding-left: 4px;
 			}
 			
 			.span-12 {
-				width:600px;
+				width:700px;
 			}
 			
 			.myLineItemTableRow {
 				background: white;
+				border-bottom: 1px solid #CCCCCC;
+			}
+			
+			.myLineItemTableRow td {
+				padding: 4px 0px 4px 8px;
 				border-bottom: 1px solid #CCCCCC;
 			}
 		</style>
