@@ -97,6 +97,20 @@
 				font-size: 1.3em;
 				font-weight: bold;
 			}
+			
+			#myPageBlockTable {
+				padding:5px;
+				background: #F8F8F8;
+				border: 1px solid #CDCDCD;
+			}
+			
+			#lineItemTable th {
+				background: #f2f3f3;
+				border: 1px solid #CDCDCD;
+				padding-left: 4px;
+				top: 2px;
+				bottom: 2px; 
+			}
 		</style>
 
 	</head>
@@ -112,6 +126,8 @@
                 <tr><td class="myCol">Total:</td><td class="valueCol"><c:out value="${order.total}"/></td></tr>
                 <tr><td class="myCol">Status:</td><td class="valueCol"><c:out value="${order.status}"/></td></tr>
 				</table>
+				
+				<div id="myPageBlockTable">
                 <h2 id="lineItemTitle">
                     Line Items
                 </h2>
@@ -132,6 +148,7 @@
 			    <c:if test="${order.status ne 'Shipped'}">
                     <button id="finalizeButton">Finalize</button>
                 </c:if>
+                </div>
 			</div>
 		</div>
 		<div>
