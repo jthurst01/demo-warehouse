@@ -31,7 +31,7 @@
             });
 
             function finalizeHandler(){
-                var invoiceUri=sr.context.links.sobjectUrl + "Invoice_Statement__c/${order.id}";
+                var invoiceUri=sr.context.links.sobjectUrl + "work_wef__Invoice_Statement__c/${order.id}";
                 var body = {"Status__c":"Shipped"};
                 Sfdc.canvas.client.ajax(invoiceUri,{
                         client : sr.client,
