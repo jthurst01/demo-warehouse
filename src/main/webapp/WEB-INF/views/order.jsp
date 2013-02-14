@@ -90,7 +90,7 @@
 			}
 			
 			#bodyDiv {
-				padding:20px;
+				padding:0px;
 				padding-top: 0px;
 			}
 			
