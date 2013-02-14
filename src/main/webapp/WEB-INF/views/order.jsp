@@ -32,7 +32,7 @@
 
             function finalizeHandler(){
                 var invoiceUri=sr.context.links.sobjectUrl + "work_wef__Invoice_Statement__c/${order.id}";
-                var body = {"Status__c":"Shipped"};
+                var body = {"work_wef__Status__c":"Shipped"};
                 Sfdc.canvas.client.ajax(invoiceUri,{
                         client : sr.client,
                         method: 'PATCH',
