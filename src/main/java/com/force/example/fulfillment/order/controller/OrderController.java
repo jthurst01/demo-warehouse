@@ -49,8 +49,8 @@ public class    OrderController {
 				Map<String, String> failureMessageMap = new HashMap<String, String>();
 				if (! orderService.findOrderById(order.getId()).isEmpty()) {
                     deleteOrder(order.getId());
-                    newOrder[0] = order;
-                    create(newOrder, response);
+                    //newOrder[0] = order;
+                    //create(newOrder, response);
 				}
 			} else {
 				failureList.add(validationMessages(failures));
