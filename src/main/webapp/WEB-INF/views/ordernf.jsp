@@ -23,13 +23,15 @@
     });
 
     function refreshHandler(){
-        alert(sr.context.environment.parameters.orderId);
+        alert(sr.context.environment.parameters.name);
         var invoiceUri=sr.context.links.sobjectUrl + "work_wef__Invoice_Statement__c/" + sr.context.environment.parameters.orderId;
+        var body = {"work_wef__Name":sr.context.environment.parameters.name};
+        alert(body);
         Sfdc.canvas.client.ajax(invoiceUri,{
             client : sr.client,
             method: 'PATCH',
             contentType: "application/json",
-            data: JSON.stringify(""),
+            data: JSON.stringify(body),
             success : localUpdateHandler
         });
     }
