@@ -51,82 +51,13 @@
     }
 
 </script>
-
-<style>
-    #myTable {
-        padding: 0px 0px 4px 0px;
-    }
-
-    #myTable td {
-        border-bottom: 1px solid #CCCCCC;
-    }
-
-    .myCol {
-        text-align: left;
-        color: #4a4f5b;
-        font-weight: bold;
-    }
-
-    .valueCol {
-        padding-left:10px;
-    }
-
-    #bodyDiv {
-        padding:0px;
-        padding-top: 0px;
-    }
-
-    #lineItemTitle {
-        font-size: 1.2em;
-        font-weight: bold;
-        padding-right: 10px;
-    }
-
-    #myPageBlockTable {
-        padding:5px;
-        background: #F8F8F8;
-        border: 1px solid #CDCDCD;
-        border-radius: 6px;
-        border-top: 3px solid #998c7c;
-    }
-
-    #lineItemTable {
-        border-right: 1px solid #CDCDCD;
-        border-left: 1px solid #CDCDCD;
-    }
-
-    #lineItemTable th {
-        background: #f2f3f3;
-        border: 1px solid #CDCDCD;
-        border-left: 0px;
-        position: relative;
-        bottom: 2px;
-        padding-right: 5px;
-        padding-left: 4px;
-    }
-
-    .span-12 {
-        width:700px;
-    }
-
-    .myLineItemTableRow {
-        background: white;
-        border-bottom: 1px solid #CCCCCC;
-    }
-
-    .myLineItemTableRow td {
-        padding: 4px 0px 4px 8px;
-        border-bottom: 1px solid #CCCCCC;
-    }
-</style>
-
 </head>
 <body>
-<div id="bodyDiv" style="width:inherit;">
+<div id="bodyDiv">
     <div class="container">
         <h2 style="font-size: 14; font-weight: bold; font-family: Arial;">Invoice Statement Not Found</h2>
-        <h2 style="font-size: 14; font-weight: bold; font-family: Arial;">Click the button to sync the records</h2>
-        <button id="refreshButton">Refresh</button>
+        <h2 style="font-size: 14; font-weight: bold; font-family: Arial;">Click the button to sync with the fullfillment system.</h2>
+        <button id="refreshButton">Sync</button>
     </div>
     <div>
 </body>
