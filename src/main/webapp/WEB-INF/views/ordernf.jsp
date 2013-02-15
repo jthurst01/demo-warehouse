@@ -31,7 +31,10 @@
 
     function localUpdateHandler(data){
         console.log("Status from remote salesforce call:", data);
-        if (!(data.status !== 200 || data.status === 204)){
+        if (data.status === 200 || data.status === 204){
+            window.top.location.href = getRoot() + "/${order.id}";
+        }
+        else{
             alert("Remote call to salesforce failed. Status: "+data.status+", Text: " + data.statusText);
         }
     }
