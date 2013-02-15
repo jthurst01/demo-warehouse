@@ -18,6 +18,10 @@
 <script>
     var sr =  JSON.parse('${not empty signedRequestJson?signedRequestJson:"{}"}');
 
+    Sfdc.canvas(function() {
+        $('#refreshButton').click(refreshHandler);
+    });
+
     function refreshHandler(){
         var invoiceUri=sr.context.links.sobjectUrl + "work_wef__Invoice_Statement__c/${order.id}";
         Sfdc.canvas.client.ajax(invoiceUri,{
