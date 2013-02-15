@@ -23,8 +23,8 @@
 	</head>
 	<body>
 		<div class="container">
-			<h2>
-				Existing Orders
+            <h2 style="font-size: 1.5em; font-weight: bold;">
+				Existing Invoice Statements
 			</h2>
 			<table width="75%">
 				<tr><th width="20%">Invoice Statement</th><th width="15%">Invoice Status</th><th width="15%">Invoice Total</th><th width="*">Line Items</th></tr>

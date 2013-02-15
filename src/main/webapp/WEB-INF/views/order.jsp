@@ -143,11 +143,12 @@
 		<div id="bodyDiv" style="width:inherit;">
 		<div class="container"> 
 			<h2 style="font-size: 1.5em; font-weight: bold;">
-				Invoice Statement <a href="#" onclick="window.top.location.href = getRoot() + '/${order.id}';"> <c:out value="${order.id}"/> </a>
+				Invoice Statement ID <a href="#" onclick="window.top.location.href = getRoot() + '/${order.id}';"> <c:out value="${order.id}"/> </a>
 			</h2>
 			<div class="span-12 last"> 
-				<table id="myTable">
-                <tr><td class="myCol">Order Id:</td><td class="valueCol"><c:out value="${order.orderId}"/></td></tr>
+				<table id="myTable" width="100%">
+                <col width="20%">
+                <tr><td class="myCol">Invoice Statement:</td><td class="valueCol"><c:out value="${order.orderId}"/></td></tr>
                 <tr><td class="myCol">Total:</td><td class="valueCol"><c:out value="${order.total}"/></td></tr>
                 <tr><td class="myCol">Status:</td><td class="valueCol"><c:out value="${order.status}"/></td></tr>
 				</table>
