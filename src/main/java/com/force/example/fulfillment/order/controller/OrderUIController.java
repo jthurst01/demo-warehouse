@@ -28,6 +28,7 @@ import com.force.example.fulfillment.order.service.OrderService;
 public class OrderUIController {
 
     private static final String SIGNED_REQUEST = "signedRequestJson";
+    private CanvasContext cc = new CanvasContext();
 
 	@Autowired
 	private OrderService orderService;
@@ -45,7 +46,7 @@ public class OrderUIController {
         CanvasRequest cr = SignedRequest.verifyAndDecode(signedRequest, getConsumerSecret());
         HttpSession session = request.getSession(true);
         session.setAttribute(SIGNED_REQUEST, srJson);
-        CanvasContext cc = cr.getContext();
+        cc = cr.getContext();
         CanvasEnvironmentContext ce = cc.getEnvironmentContext();
         String temp = ce.getSRParameters().toString();
         if(!temp.startsWith("a")) {
@@ -58,7 +59,7 @@ public class OrderUIController {
     @RequestMapping(method=RequestMethod.GET)
     public String getOrdersPage(Model model) {
         model.addAttribute("order", new Order());
-        model.addAttribute("orders", orderService.listOrders());
+        model.addAttribute("orders", orderService.listOrders(cc.getOrganizationContext().getOrganizationId()));
         return "orders";
     }
 

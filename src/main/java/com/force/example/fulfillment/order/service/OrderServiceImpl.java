@@ -40,10 +40,13 @@ public class OrderServiceImpl implements OrderService {
         em.merge(li);
     }
 
-	public List<Order> listOrders() {
-		CriteriaQuery<Order> c = em.getCriteriaBuilder().createQuery(Order.class);
-        c.from(Order.class);
-        return em.createQuery(c).getResultList();
+	public List<Order> listOrders(String orgId) {
+		//CriteriaQuery<Order> c = em.getCriteriaBuilder().createQuery(Order.class);
+        //c.from(Order.class);
+        //return em.createQuery(c).getResultList();
+        return em.createQuery("SELECT o FROM Order o WHERE o.orgId = :orgId", Order.class)
+                .setParameter("orgId", orgId)
+                .getResultList();
     }
 
 	public Order findOrder(String id) {

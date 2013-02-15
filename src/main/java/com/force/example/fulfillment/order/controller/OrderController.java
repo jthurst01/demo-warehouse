@@ -13,12 +13,7 @@ import com.force.example.fulfillment.order.model.LineItem;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.ResponseStatus;
+import org.springframework.web.bind.annotation.*;
 
 import com.force.example.fulfillment.order.model.Order;
 import com.force.example.fulfillment.order.service.OrderService;
@@ -65,7 +60,8 @@ public class    OrderController {
 			for (Order order: orders) {
 				orderService.addOrder(order);
 				HashMap<String, Object> map = new HashMap<String, Object>();
-				map.put("id", order.getId());
+				map.put("orgId", order.getOrgId());
+                map.put("id", order.getId());
 				map.put("order_number", order.getOrderId());
                 map.put("status", order.getStatus());
 				responseList.add(map);
@@ -90,8 +86,8 @@ public class    OrderController {
     }
 
 	@RequestMapping(method=RequestMethod.GET)
-	public @ResponseBody List<Order> getOrders() {
-        List<Order> lo = orderService.listOrders();
+	public @ResponseBody List<Order> getOrders(@RequestParam String orgId) {
+        List<Order> lo = orderService.listOrders(orgId);
 
         // Need to clone the array list into an object that
         // is friendly to deserialization.

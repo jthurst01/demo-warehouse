@@ -27,10 +27,11 @@
 				Existing Orders
 			</h2>
 			<table width="75%">
-				<tr><th width="25%">Order ID</th><th width="20%">Order Number</th><th width="15%">Order Status</th><th width="15%">Order Total</th><th width="*">Line Items</th></tr>
+				<tr><th width="25%">Org ID</th><th width="25%">Order ID</th><th width="20%">Order Number</th><th width="15%">Order Status</th><th width="15%">Order Total</th><th width="*">Line Items</th></tr>
 			    <c:forEach items="${orders}" var="order">
 			    	<tr>
-			          <td><a href="orderui/${order.id}"><c:out value="${order.id}"/></a></td>
+                      <td><a href="orderui/${order.id}"><c:out value="${order.orgId}"/></a></td>
+                      <td><a href="orderui/${order.id}"><c:out value="${order.id}"/></a></td>
 			    	  <td><a href="orderui/${order.id}"><c:out value="${order.orderId}"/></a></td>
                       <td><a href="orderui/${order.id}"><c:out value="${order.status}"/></a></td>
                       <td><c:out value="${order.total}"/></td>

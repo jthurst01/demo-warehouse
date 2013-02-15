@@ -17,9 +17,13 @@ public class Order {
 
     @Id
 	@NotNull
-//    @Column(name = "ORDER_ID")
 	@Size(min = 15, max = 18)
 	private String id;
+
+    @Column
+    @NotNull
+    @Size(min = 15, max = 18)
+    private String orgId;
 
     @Column
     private String orderId;
@@ -48,6 +52,14 @@ public class Order {
 	public void setId(String id) {
 		this.id = id;
 	}
+
+    public String getOrgId() {
+        return orgId;
+    }
+
+    public void setOrgId(String orgId) {
+        this.orgId = orgId;
+    }
 
     public String getStatus() {
         return status;
@@ -93,6 +105,7 @@ public class Order {
     public Order toJsonFriendly() {
         Order o = new Order();
         o.id = this.id;
+        o.orgId = this.orgId;
         o.orderId = this.orderId;
         o.total = this.total;
         o.status = this.status;
