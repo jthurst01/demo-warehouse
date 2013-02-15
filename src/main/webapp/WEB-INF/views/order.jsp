@@ -80,7 +80,7 @@
 			}
 			
 			.myCol {
-				text-align: right;
+				text-align: left;
 				color: #4a4f5b;
 				font-weight: bold;
 			}
@@ -142,8 +142,8 @@
 	<body>
 		<div id="bodyDiv" style="width:inherit;">
 		<div class="container"> 
-			<h2>
-				Order <a href="#" onclick="window.top.location.href = getRoot() + '/${order.id}';"> <c:out value="${order.id}"/> </a>
+			<h2 style="font-size: 1.5em; font-weight: bold;">
+				Invoice Statement <a href="#" onclick="window.top.location.href = getRoot() + '/${order.id}';"> <c:out value="${order.id}"/> </a>
 			</h2>
 			<div class="span-12 last"> 
 				<table id="myTable">
