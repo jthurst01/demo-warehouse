@@ -31,7 +31,7 @@
 			    <c:forEach items="${orders}" var="order">
 			    	<tr>
                       <td><a href="orderui/${order.id}"><c:out value="${order.orderId}"/></a></td>
-                      <td><a href="orderui/${order.id}"><c:out value="${order.status}"/></a></td>
+                      <td><c:out value="${order.status}"/></td>
                       <td><c:out value="${order.total}"/></td>
                       <td><c:out value="${order.lineItemCount}"/></td>
 			    	</tr>
