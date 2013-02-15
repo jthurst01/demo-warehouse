@@ -28,7 +28,7 @@
             client : sr.client,
             method: 'PATCH',
             contentType: "application/json",
-            data: JSON.stringify(body),
+            data: JSON.stringify(""),
             success : localUpdateHandler
         });
     }
