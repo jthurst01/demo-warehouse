@@ -27,7 +27,7 @@
 				Existing Invoice Statements
 			</h2>
 			<table width="75%">
-				<tr><th width="20%">Invoice Statement</th><th width="15%">Invoice Status</th><th width="15%">Invoice Total</th><th width="*">Line Items</th></tr>
+				<tr><th width="20%">Invoice Statement</th><th width="15%">Invoice Status</th><th width="15%">Invoice Total</th><th width="*"># Line Items</th></tr>
 			    <c:forEach items="${orders}" var="order">
 			    	<tr>
                       <td><a href="orderui/${order.id}"><c:out value="${order.orderId}"/></a></td>
