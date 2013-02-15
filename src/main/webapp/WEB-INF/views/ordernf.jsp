@@ -56,7 +56,7 @@
 <div id="bodyDiv">
     <div class="container">
         <h2 style="font-size: 14; font-weight: bold; font-family: Arial;">Invoice Statement Not Found</h2>
-        <h2 style="font-size: 14; font-weight: bold; font-family: Arial;">Click the button to sync with the fullfillment system.</h2>
+        <h2 style="font-size: 14; font-weight: bold; font-family: Arial;">Click the button to sync with the fulfillment system.</h2>
         <button id="refreshButton">Sync</button>
     </div>
     <div>
