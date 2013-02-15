@@ -23,7 +23,8 @@
     });
 
     function refreshHandler(){
-        var invoiceUri=sr.context.links.sobjectUrl + "work_wef__Invoice_Statement__c/${order.id}";
+        alert(sr.context.environment.parameters.orderId);
+        var invoiceUri=sr.context.links.sobjectUrl + "work_wef__Invoice_Statement__c/" + sr.context.environment.parameters.orderId;
         Sfdc.canvas.client.ajax(invoiceUri,{
             client : sr.client,
             method: 'PATCH',
