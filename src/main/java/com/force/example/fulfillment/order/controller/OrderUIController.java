@@ -23,6 +23,8 @@ import canvas.SignedRequest;
 import com.force.example.fulfillment.order.model.Order;
 import com.force.example.fulfillment.order.service.OrderService;
 
+import java.util.Map;
+
 @Controller
 @RequestMapping(value="/orderui")
 public class OrderUIController {
@@ -48,13 +50,15 @@ public class OrderUIController {
         session.setAttribute(SIGNED_REQUEST, srJson);
         cc = cr.getContext();
         CanvasEnvironmentContext ce = cc.getEnvironmentContext();
-        String temp = ce.getSRParameters().toString();
-        if(!temp.startsWith("a")) {
-            return getOrdersPage(model);
-        } else {
-            return getOrderPage(ce.getSRParameters().toString(), model);
+        Map<String, Object> params = ce.getParameters();
+        if (params != null) {
+            String orderId = (String)params.get("orderId");
+            if(orderId != null) {
+                return getOrderPage(orderId, model);
+            }
         }
-	}
+        return getOrdersPage(model);
+    }
 
     @RequestMapping(method=RequestMethod.GET)
     public String getOrdersPage(Model model) {

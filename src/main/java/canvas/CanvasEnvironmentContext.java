@@ -29,6 +29,9 @@ package canvas;
 import org.codehaus.jackson.annotate.JsonIgnoreProperties;
 import org.codehaus.jackson.annotate.JsonProperty;
 
+import java.util.HashMap;
+import java.util.Map;
+
 @JsonIgnoreProperties(ignoreUnknown=true)
 public class CanvasEnvironmentContext {
 
@@ -36,7 +39,7 @@ public class CanvasEnvironmentContext {
     private String uiTheme;
     private Dimensions dimensions;
     private SystemVersion version;
-    private SRParameters parameters;
+    private  Map<String, Object> parameters;
 
     /**
      * Returns the url of the current location.
@@ -84,13 +87,26 @@ public class CanvasEnvironmentContext {
         this.version = systemVersion;
     }
 
+//    @JsonProperty("parameters")
+//    public SRParameters getSRParameters() {
+//        return this.parameters;
+//    }
+//
+//    @JsonProperty("parameters")
+//    public void setSRParameters(SRParameters parameters) {
+//        this.parameters = parameters;
+//    }
+
     @JsonProperty("parameters")
-    public SRParameters getSRParameters() {
+    public Map<String, Object> getParameters() {
+        if (null == this.parameters){
+            this.parameters = new HashMap<String, Object>();
+        }
         return this.parameters;
     }
 
     @JsonProperty("parameters")
-    public void setSRParameters(SRParameters parameters) {
+    public void setParameters(Map<String, Object> parameters) {
         this.parameters = parameters;
     }
 
@@ -176,29 +192,29 @@ public class CanvasEnvironmentContext {
 
     }
 
-    @JsonIgnoreProperties(ignoreUnknown=true)
-    public static class SRParameters{
-
-        private String orderId = null;
-
-        @JsonProperty("orderId")
-        public String getOrderId() {
-            return this.orderId;
-        }
-        @JsonProperty("orderId")
-        public void setOrderId(String orderId) {
-            this.orderId = orderId;
-        }
-
-        @Override
-        public String toString(){
-            if(null == orderId) {
-                return String.format("noparams");
-            }
-            else {
-                return String.format("%s",orderId);
-            }
-        }
-    }
+//    @JsonIgnoreProperties(ignoreUnknown=true)
+//    public static class SRParameters{
+//
+//        private String orderId = null;
+//
+//        @JsonProperty("orderId")
+//        public String getOrderId() {
+//            return this.orderId;
+//        }
+//        @JsonProperty("orderId")
+//        public void setOrderId(String orderId) {
+//            this.orderId = orderId;
+//        }
+//
+//        @Override
+//        public String toString(){
+//            if(null == orderId) {
+//                return String.format("noparams");
+//            }
+//            else {
+//                return String.format("%s",orderId);
+//            }
+//        }
+//    }
 
 }
