@@ -30,22 +30,13 @@
                 border-bottom: 1px solid #CCCCCC;
             }
 
-            .myCol {
-                text-align: left;
-                color: #4a4f5b;
-                font-weight: bold;
-            }
+            #shippedInvoiceTitle {
+                 font-size: 1.2em;
+                 font-weight: bold;
+                 padding-right: 10px;
+             }
 
-            .valueCol {
-                padding-left:10px;
-            }
-
-            #bodyDiv {
-                padding:0px;
-                padding-top: 0px;
-            }
-
-            #lineItemTitle {
+            #unshippedInvoiceTitle {
                 font-size: 1.2em;
                 font-weight: bold;
                 padding-right: 10px;
@@ -72,10 +63,6 @@
                 bottom: 2px;
                 padding-right: 5px;
                 padding-left: 4px;
-            }
-
-            .span-12 {
-                width:700px;
             }
 
             .myShippedInvoiceTableRow {
@@ -116,15 +103,18 @@
 	</head>
 	<body>
 		<div class="container">
+            <h2 style="font-size: 1.5em; font-weight: bold;">
+                Existing Invoice Statements
+            </h2>
             <div id="myPageBlockTable">
-                <h2 id="lineItemTitle">
-                    Existing Invoice Statements
+                <h2 id="shippedInvoiceTitle">
+                    Shipped Invoice Statements
                 </h2>
-                <table id="shippedInvoiceTable">
+                <table id="unshippedInvoiceTable">
                     <tr><th style="border-left:0px;">Invoice Statement</th><th>Invoice Status</th><th>Invoice Total</th><th style="border-right:0px;"># Line Items</th></tr>
                     <c:forEach items="${orders}" var="order">
-                        <c:if test="${order.status == 'Shipped'}">
-                            <tr class="myShippedInvoiceTableRow">
+                        <c:if test="${order.status ne 'Shipped'}">
+                            <tr class="myUnshippedInvoiceTableRow">
                               <td><a href="orderui/${order.id}"><c:out value="${order.orderId}"/></a></td>
                               <td><c:out value="${order.status}"/></td>
                               <td><c:out value="${order.total}"/></td>
@@ -133,11 +123,14 @@
                         </c:if>
                     </c:forEach>
                 </table>
-                <table id="unshippedInvoiceTable">
+                <h2 id="unshippedInvoiceTitle">
+                    Pending Invoice Statements
+                </h2>
+                <table id="shippedInvoiceTable">
                     <tr><th style="border-left:0px;">Invoice Statement</th><th>Invoice Status</th><th>Invoice Total</th><th style="border-right:0px;"># Line Items</th></tr>
                     <c:forEach items="${orders}" var="order">
                         <c:if test="${order.status ne 'Shipped'}">
-                            <tr class="myUnshippedInvoiceTableRow">
+                            <tr class="myShippedInvoiceTableRow">
                                 <td><a href="orderui/${order.id}"><c:out value="${order.orderId}"/></a></td>
                                 <td><c:out value="${order.status}"/></td>
                                 <td><c:out value="${order.total}"/></td>
