@@ -176,17 +176,5 @@
                 </div>
 			</div>
 		</div>
-		<div>
 	</body>
-	<%--<script>--%>
-	<%--$("#delete").click(function() {--%>
-		<%--$.deleteJSON("/order/${order.orderId}", function(data) {--%>
-			<%--alert("Deleted order ${order.orderId}");--%>
-			<%--location.href = "/orderui";--%>
-		<%--}, function(data) {--%>
-			<%--alert("Error deleting order ${order.orderId}");--%>
-		<%--});--%>
-		<%--return false;				--%>
-	<%--});--%>
-	<%--</script>--%>
 </html>
