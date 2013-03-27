@@ -83,7 +83,7 @@
                 border-bottom: 1px solid #CCCCCC;
             }
 
-            .myLineItemTableRow td {
+            .myPageBlockTable td {
                 padding: 4px 0px 4px 8px;
                 border-bottom: 1px solid #CCCCCC;
             }
