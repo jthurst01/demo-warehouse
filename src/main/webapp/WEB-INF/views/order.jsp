@@ -149,16 +149,16 @@
                         <tr><td class="myCol">Invoice Statement:</td><td class="valueCol"><c:out value="${order.orderId}"/></td></tr>
                         <tr><td class="myCol">Invoice Statement Id:</td><td class="valueCol"><c:out value="${order.id}"/></td></tr>
                         <tr><td class="myCol">Total:</td><td class="valueCol"><c:out value="${order.total}"/></td></tr>
-                        <tr><td class="myCol">Status:</td><td class="valueCol"><c:out value="${order.status}"/></td>
+                        <tr><td class="myCol">Status:</td><td class="valueCol"><c:out value="${order.status}"/>
                             <c:choose>
                                 <c:when test="${order.status == 'Shipped'}">
-                                    <td><img src="/resources/images/shipped.png" /></td>
+                                    <img src="/resources/images/shipped.png" />
                                 </c:when>
                                 <c:otherwise>
-                                    <td><img src="/resources/images/pending.png" /></td>
+                                    <img src="/resources/images/pending.png" />
                                 </c:otherwise>
                             </c:choose>
-                        </tr>
+                        </td></tr>
                     </table>
                 <h2 id="lineItemTitle">
                     Line Items
