@@ -149,7 +149,7 @@
                         <tr><td class="myCol">Invoice Statement:</td><td class="valueCol"><c:out value="${order.orderId}"/></td></tr>
                         <tr><td class="myCol">Invoice Statement Id:</td><td class="valueCol"><c:out value="${order.id}"/></td></tr>
                         <tr><td class="myCol">Total:</td><td class="valueCol"><c:out value="${order.total}"/></td></tr>
-                        <tr><td class="myCol">Status:</td><td class="valueCol"><c:out value="${order.status}"/>
+                        <tr><td class="myCol">Status:</td><td class="valueCol" valign="center"><c:out value="${order.status}"/>
                             <c:choose>
                                 <c:when test="${order.status == 'Shipped'}">
                                     <img src="/resources/images/shipped.png" />
