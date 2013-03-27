@@ -16,27 +16,97 @@
         <script type="text/javascript" src="<c:url value="/resources/canvas-all.js" /> "></script>
 
         <c:if test="${not empty signedRequestJson}">
-          <script type="text/javascript"/>
+          <script type="text/javascript">
             var signedRequest = JSON.parse('${signedRequestJson}');
           </script>
         </c:if>
+
+        <style>
+            #myTable {
+                padding: 0px 0px 4px 0px;
+            }
+
+            #myTable td {
+                border-bottom: 1px solid #CCCCCC;
+            }
+
+            .myCol {
+                text-align: left;
+                color: #4a4f5b;
+                font-weight: bold;
+            }
+
+            .valueCol {
+                padding-left:10px;
+            }
+
+            #bodyDiv {
+                padding:0px;
+                padding-top: 0px;
+            }
+
+            #lineItemTitle {
+                font-size: 1.2em;
+                font-weight: bold;
+                padding-right: 10px;
+            }
+
+            #myPageBlockTable {
+                padding:5px;
+                background: #F8F8F8;
+                border: 1px solid #CDCDCD;
+                border-radius: 6px;
+                border-top: 3px solid #998c7c;
+            }
+
+            #lineItemTable {
+                border-right: 1px solid #CDCDCD;
+                border-left: 1px solid #CDCDCD;
+            }
+
+            #lineItemTable th {
+                background: #f2f3f3;
+                border: 1px solid #CDCDCD;
+                border-left: 0px;
+                position: relative;
+                bottom: 2px;
+                padding-right: 5px;
+                padding-left: 4px;
+            }
+
+            .span-12 {
+                width:700px;
+            }
+
+            .myLineItemTableRow {
+                background: white;
+                border-bottom: 1px solid #CCCCCC;
+            }
+
+            .myLineItemTableRow td {
+                padding: 4px 0px 4px 8px;
+                border-bottom: 1px solid #CCCCCC;
+            }
+        </style>
 	</head>
 	<body>
 		<div class="container">
             <h2 style="font-size: 1.5em; font-weight: bold;">
 				Existing Invoice Statements
 			</h2>
-			<table width="75%">
-				<tr><th width="20%">Invoice Statement</th><th width="15%">Invoice Status</th><th width="15%">Invoice Total</th><th width="*"># Line Items</th></tr>
-			    <c:forEach items="${orders}" var="order">
-			    	<tr>
-                      <td><a href="orderui/${order.id}"><c:out value="${order.orderId}"/></a></td>
-                      <td><c:out value="${order.status}"/></td>
-                      <td><c:out value="${order.total}"/></td>
-                      <td><c:out value="${order.lineItemCount}"/></td>
-			    	</tr>
-			    </c:forEach>
-			</table>
+            <div class="span-12 last">
+                <table id="myPageBlockTable" width="75%">
+                    <tr><th width="20%">Invoice Statement</th><th width="15%">Invoice Status</th><th width="15%">Invoice Total</th><th width="*"># Line Items</th></tr>
+                    <c:forEach items="${orders}" var="order">
+                        <tr>
+                          <td><a href="orderui/${order.id}"><c:out value="${order.orderId}"/></a></td>
+                          <td><c:out value="${order.status}"/></td>
+                          <td><c:out value="${order.total}"/></td>
+                          <td><c:out value="${order.lineItemCount}"/></td>
+                        </tr>
+                    </c:forEach>
+                </table>
+             </div>
 		</div>
 	</body>
 

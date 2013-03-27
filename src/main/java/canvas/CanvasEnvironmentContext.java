@@ -39,7 +39,7 @@ public class CanvasEnvironmentContext {
     private String uiTheme;
     private Dimensions dimensions;
     private SystemVersion version;
-    private  Map<String, Object> parameters;
+    private Map<String, Object> parameters;
 
     /**
      * Returns the url of the current location.
