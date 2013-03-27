@@ -59,12 +59,12 @@
                 border-top: 3px solid #998c7c;
             }
 
-            #lineItemTable {
+            #shippedInvoiceTable {
                 border-right: 1px solid #CDCDCD;
                 border-left: 1px solid #CDCDCD;
             }
 
-            #lineItemTable th {
+            #shippedInvoiceTable th {
                 background: #f2f3f3;
                 border: 1px solid #CDCDCD;
                 border-left: 0px;
@@ -78,12 +78,37 @@
                 width:700px;
             }
 
-            .myLineItemTableRow {
+            .myShippedInvoiceTableRow {
                 background: white;
                 border-bottom: 1px solid #CCCCCC;
             }
 
-            .myLineItemTableRow td {
+            .myShippedInvoiceTableRow td {
+                padding: 4px 0px 4px 8px;
+                border-bottom: 1px solid #CCCCCC;
+            }
+
+            #unshippedInvoiceTable {
+                border-right: 1px solid #CDCDCD;
+                border-left: 1px solid #CDCDCD;
+            }
+
+            #unshippedInvoiceTable th {
+                background: #f2f3f3;
+                border: 1px solid #CDCDCD;
+                border-left: 0px;
+                position: relative;
+                bottom: 2px;
+                padding-right: 5px;
+                padding-left: 4px;
+            }
+
+            .myUnshippedInvoiceTableRow {
+                background: white;
+                border-bottom: 1px solid #CCCCCC;
+            }
+
+            .myUnshippedInvoiceTableRow td {
                 padding: 4px 0px 4px 8px;
                 border-bottom: 1px solid #CCCCCC;
             }
@@ -95,11 +120,11 @@
                 <h2 id="lineItemTitle">
                     Existing Invoice Statements
                 </h2>
-                <table id="lineItemTable">
+                <table id="shippedInvoiceTable">
                     <tr><th style="border-left:0px;">Invoice Statement</th><th>Invoice Status</th><th>Invoice Total</th><th style="border-right:0px;"># Line Items</th></tr>
                     <c:forEach items="${orders}" var="order">
-                        <c:if test="${order.status e 'Shipped'}">
-                            <tr class="myLineItemTableRow">
+                        <c:if test="${order.status == 'Shipped'}">
+                            <tr class="myShippedInvoiceTableRow">
                               <td><a href="orderui/${order.id}"><c:out value="${order.orderId}"/></a></td>
                               <td><c:out value="${order.status}"/></td>
                               <td><c:out value="${order.total}"/></td>
@@ -108,11 +133,11 @@
                         </c:if>
                     </c:forEach>
                 </table>
-                <table id="lineItemTable">
+                <table id="unshippedInvoiceTable">
                     <tr><th style="border-left:0px;">Invoice Statement</th><th>Invoice Status</th><th>Invoice Total</th><th style="border-right:0px;"># Line Items</th></tr>
                     <c:forEach items="${orders}" var="order">
                         <c:if test="${order.status ne 'Shipped'}">
-                            <tr class="myLineItemTableRow">
+                            <tr class="myUnshippedInvoiceTableRow">
                                 <td><a href="orderui/${order.id}"><c:out value="${order.orderId}"/></a></td>
                                 <td><c:out value="${order.status}"/></td>
                                 <td><c:out value="${order.total}"/></td>
