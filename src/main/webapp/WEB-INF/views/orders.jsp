@@ -103,6 +103,7 @@
 	</head>
 	<body>
 		<div class="container">
+            <div><img src="/resources/images/logo.png" /></div>
             <h2 style="font-size: 1.5em; font-weight: bold;">
                 Existing Invoice Statements
             </h2>
