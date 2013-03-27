@@ -142,22 +142,23 @@
 	<body>
 		<div id="bodyDiv" style="width:inherit;">
 		<div class="container">
-			<div class="span-12 last"> 
-				<%--<table id="myTable" width="100%">--%>
-                <%--<col width="20%">--%>
-                <%--<tr><td class="myCol">Invoice Statement:</td><td class="valueCol"><c:out value="${order.orderId}"/></td></tr>--%>
-                <%--<tr><td class="myCol">Invoice Statement Id:</td><td class="valueCol"><c:out value="${order.id}"/></td></tr>--%>
-                <%--<tr><td class="myCol">Total:</td><td class="valueCol"><c:out value="${order.total}"/></td></tr>--%>
-                <%--<tr><td class="myCol">Status:</td><td class="valueCol"><c:out value="${order.status}"/></td></tr>--%>
-				<%--</table>--%>
-				
+			<div class="span-12 last">
 				<div id="myPageBlockTable">
                     <table id="myTable" width="100%">
                         <col width="20%">
                         <tr><td class="myCol">Invoice Statement:</td><td class="valueCol"><c:out value="${order.orderId}"/></td></tr>
                         <tr><td class="myCol">Invoice Statement Id:</td><td class="valueCol"><c:out value="${order.id}"/></td></tr>
                         <tr><td class="myCol">Total:</td><td class="valueCol"><c:out value="${order.total}"/></td></tr>
-                        <tr><td class="myCol">Status:</td><td class="valueCol"><c:out value="${order.status}"/></td></tr>
+                        <tr><td class="myCol">Status:</td><td class="valueCol"><c:out value="${order.status}"/></td>
+                            <c:choose>
+                                <c:when test="${order.status == 'Shipped'}">
+                                    <img src="/resources/shipped.png" />
+                                </c:when>
+                                <c:otherwise>
+                                    <img src="/resources/pending.png" />
+                                </c:otherwise>
+                            </c:choose>
+                        </tr>
                     </table>
                 <h2 id="lineItemTitle">
                     Line Items
