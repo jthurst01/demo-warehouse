@@ -98,7 +98,7 @@
                 <table id="lineItemTable">
                     <tr><th style="border-left:0px;">Invoice Statement</th><th>Invoice Status</th><th>Invoice Total</th><th style="border-right:0px;"># Line Items</th></tr>
                     <c:forEach items="${orders}" var="order">
-                        <tr>
+                        <tr class="myLineItemTableRow">
                           <td><a href="orderui/${order.id}"><c:out value="${order.orderId}"/></a></td>
                           <td><c:out value="${order.status}"/></td>
                           <td><c:out value="${order.total}"/></td>

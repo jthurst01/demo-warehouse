@@ -21,7 +21,7 @@ import com.force.example.fulfillment.order.service.OrderService;
 
 @Controller 
 @RequestMapping(value="/order")
-public class    OrderController {
+public class OrderController {
 
 	@Autowired
 	private OrderService orderService;
