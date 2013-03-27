@@ -152,10 +152,10 @@
                         <tr><td class="myCol">Status:</td><td class="valueCol"><c:out value="${order.status}"/></td>
                             <c:choose>
                                 <c:when test="${order.status == 'Shipped'}">
-                                    <img src="/resources/images/shipped.png" />
+                                    <td><img src="/resources/images/shipped.png" /></td>
                                 </c:when>
                                 <c:otherwise>
-                                    <img src="/resources/images/pending.png" />
+                                    <td><img src="/resources/images/pending.png" /></td>
                                 </c:otherwise>
                             </c:choose>
                         </tr>
