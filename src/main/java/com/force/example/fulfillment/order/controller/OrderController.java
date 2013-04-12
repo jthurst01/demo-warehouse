@@ -85,7 +85,7 @@ public class OrderController {
 
 	@RequestMapping(method=RequestMethod.GET)
 	public @ResponseBody List<Order> getOrders(@RequestParam String orgId) {
-        List<Order> lo = orderService.listOrders(orgId);
+        List<Order> lo = orderService.listOrders("00D30000001bQDS"); //orgId);
 
         // Need to clone the array list into an object that
         // is friendly to deserialization.
