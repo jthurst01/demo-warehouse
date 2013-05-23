@@ -109,7 +109,7 @@
             </h2>
             <div id="myPageBlockTable">
                 <h2 id="shippedInvoiceTitle">
-                    Shipped Invoice Statements
+                    Pending Invoice Statements
                 </h2>
                 <table id="unshippedInvoiceTable">
                     <tr><th style="border-left:0px;">Invoice Statement</th><th>Invoice Status</th><th>Invoice Total</th><th style="border-right:0px;"># Line Items</th></tr>
@@ -125,7 +125,7 @@
                     </c:forEach>
                 </table>
                 <h2 id="unshippedInvoiceTitle">
-                    Pending Invoice Statements
+                    Shipped Invoice Statements
                 </h2>
                 <table id="shippedInvoiceTable">
                     <tr><th style="border-left:0px;">Invoice Statement</th><th>Invoice Status</th><th>Invoice Total</th><th style="border-right:0px;"># Line Items</th></tr>
