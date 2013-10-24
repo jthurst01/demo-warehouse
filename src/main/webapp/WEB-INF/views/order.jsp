@@ -31,8 +31,10 @@
             });
 
             function finalizeHandler(){
-                var invoiceUri=sr.context.links.sobjectUrl + "work_wef__Invoice_Statement__c/${order.id}";
-                var body = {"work_wef__Status__c":"Shipped"};
+            	var namespace = (!!sr.context.organization.namespacePrefix) ? (sr.context.organization.namespacePrefix + "__") : "";
+            module.approve(id);
+                var invoiceUri=sr.context.links.sobjectUrl + namespace + "Invoice_Statement__c/${order.id}";
+                var body = {namespace + "Status__c":"Shipped"};
                 Sfdc.canvas.client.ajax(invoiceUri,{
                         client : sr.client,
                         method: 'PATCH',
