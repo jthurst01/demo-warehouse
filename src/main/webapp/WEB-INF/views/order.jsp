@@ -32,7 +32,6 @@
 
             function finalizeHandler(){
             	var namespace = (!!sr.context.organization.namespacePrefix) ? (sr.context.organization.namespacePrefix + "__") : "";
-            module.approve(id);
                 var invoiceUri=sr.context.links.sobjectUrl + namespace + "Invoice_Statement__c/${order.id}";
                 var status = namespace + "Status__c";
                 var body={};
