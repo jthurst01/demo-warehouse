@@ -34,7 +34,9 @@
             	var namespace = (!!sr.context.organization.namespacePrefix) ? (sr.context.organization.namespacePrefix + "__") : "";
             module.approve(id);
                 var invoiceUri=sr.context.links.sobjectUrl + namespace + "Invoice_Statement__c/${order.id}";
-                var body = {namespace + "Status__c":"Shipped"};
+                var status = namespace + "Status__c";
+                var body={};
+                body[status]="Shipped";
                 Sfdc.canvas.client.ajax(invoiceUri,{
                         client : sr.client,
                         method: 'PATCH',
