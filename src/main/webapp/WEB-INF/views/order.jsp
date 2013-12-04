@@ -54,8 +54,8 @@
                       type: "PUT",
                       data: JSON.stringify({status:"Shipped", orderId:"${order.orderId}", total:"${order.total}"}),
                       success: function() {
-                          //document.location.reload(true);
-                          window.top.location.href = sr.client.targetOrigin + sr.context.user.siteUrlPrefix + "/${order.id}";// getRoot() + "/${order.id}";
+                          var site = (!!sr.context.user.siteUrlPrefix) ? (sr.context.user.siteUrlPrefix) : "";
+                          window.top.location.href = sr.client.targetOrigin + site + "/${order.id}";// getRoot() + "/${order.id}";
                       },
                       error: function(){
                         alert("Error occurred updating local status.");
