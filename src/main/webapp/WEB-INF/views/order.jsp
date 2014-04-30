@@ -5,8 +5,8 @@
 
 <html>
 	<head>
-
 		<title>Invoice Statement</title>
+		<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
 		<link rel="stylesheet" href="<c:url value="/resources/blueprint/screen.css" />" type="text/css" media="screen, projection">
 		<%--<link rel="stylesheet" href="<c:url value="/resources/blueprint/print.css" />" type="text/css" media="print">--%>
 		<!--[if lt IE 8]>
@@ -145,7 +145,7 @@
 	<body>
 		<div id="bodyDiv" style="width:inherit;">
 		<div class="container">
-			<div class="span-12 last">
+			<div>
 				<div id="myPageBlockTable">
                     <table id="myTable" width="100%">
                         <col width="20%">
