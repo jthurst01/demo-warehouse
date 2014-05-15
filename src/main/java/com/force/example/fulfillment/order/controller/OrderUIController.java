@@ -57,10 +57,15 @@ public class OrderUIController {
         //        return getOrderPage(orderId, model);
         //    }
         //}
+        String subLocation = (String)ce.get("subLocation");
         Map<String, Object> record = ce.getRecord();
         if (record != null) {
             String orderId = (String)record.get("Id");
             if(orderId != null) {
+                if (subLocation != null) {
+                    model.addAttribute("ordernf");
+                    return "ordernf";
+                }
                 return getOrderPage(orderId, model);
             }
         }
