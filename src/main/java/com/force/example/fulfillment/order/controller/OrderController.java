@@ -58,7 +58,7 @@ public class OrderController {
 			for (Order order: orders) {
 				orderService.addOrder(order);
 				HashMap<String, Object> map = new HashMap<String, Object>();
-				map.put("orgId", "00DR00000008bbz"); //order.getOrgId());
+				map.put("orgId", order.getOrgId());
                 map.put("id", order.getId());
 				map.put("order_number", order.getOrderId());
                 map.put("status", order.getStatus());
