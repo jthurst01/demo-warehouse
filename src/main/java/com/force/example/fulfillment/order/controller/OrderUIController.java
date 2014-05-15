@@ -87,11 +87,11 @@ public class OrderUIController {
         }
         if (subLocation != null) {
             if (subLocation.equals("S1RecordHomePreview")) {
-                model.addAttribute("s1rp", order);
+                model.addAttribute("order", order);
                 return "s1rp";
             }
             if (subLocation.equals("S1MobileCardPreview")) {
-                model.addAttribute("s1mp", order);
+                model.addAttribute("order", order);
                 return "s1mp";
             }
         }
