@@ -5,6 +5,15 @@
 <html>
 <head>
     <title>Invoice Statement Not Found</title>
+    <script type="text/javascript" src="<c:url value="/resources/jquery-1.4.min.js" /> "></script>
+    <script type="text/javascript" src="<c:url value="/resources/json.min.js" /> "></script>
+    <script type="text/javascript" src="<c:url value="/resources/canvas-all.js" /> "></script>
+    <script>
+        var sr =  JSON.parse('${not empty signedRequestJson?signedRequestJson:"{}"}');
+        Sfdc.canvas(function() {
+            Sfdc.canvas.client.autogrow(sr.client, true);
+        });
+    </script>
 </head>
 <body>
 <div id="bodyDiv">
