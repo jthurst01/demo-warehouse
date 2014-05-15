@@ -97,7 +97,8 @@ public class OrderUIController {
         return "order";
     }
 
-	private static final String getConsumerSecret(){
+
+    private static final String getConsumerSecret(){
 	    String secret = System.getenv("CANVAS_CONSUMER_SECRET");
 	    if (null == secret){
 	        throw new IllegalStateException("Consumer secret not found in environment.  You must define the CANVAS_CONSUMER_SECRET environment variable.");
