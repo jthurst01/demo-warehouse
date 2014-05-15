@@ -148,7 +148,7 @@
     <div class="container">
         <div>
             <div id="myPageBlockTable">
-                <h1>S1RecordHomePreview</h1>
+                <h1>S1MobileCardPreview</h1>
                 <table id="myTable" width="100%">
                     <col width="20%">
                     <tr><td class="myCol">Invoice Statement:</td><td class="valueCol"><c:out value="${order.orderId}"/></td></tr>

@@ -171,7 +171,7 @@
                     <tr><th style="border-left:0px;">Line Item Name</th><th>Quantity</th><th>Unit Price</th><th>Total</th><th style="border-right:0px;">Item</th></tr>
                     <c:forEach items="${order.lineItems}" var="li">
                         <tr class="myLineItemTableRow">
-                            <td><a href="#" onclick="window.top.location.href = getRoot() + '/${li.id}';"><c:out value="${li.lineItemId}"/></td>
+                            <td><a href="#" onclick="window.top.location.href = getRoot() + '/${li.id}';"><c:out value="${li.lineItemId}"/></a></td>
                             <td><c:out value="${li.quantity}"/></td>
                             <td><c:out value="${li.unitPrice}"/></td>
                             <td><c:out value="${li.total}"/></td>
@@ -186,5 +186,6 @@
                 </div>
 			</div>
 		</div>
-	</body>
+        </div>
+    </body>
 </html>
