@@ -34,7 +34,9 @@
                 if (ch !== sh) {
                 	s.height = sh + "px";
                 }
-                Sfdc.canvas.client.resize(sr.client, {height: "299px"});
+                console.log("s:", s);
+                console.log("s.height", s.height);
+                Sfdc.canvas.client.resize(sr.client, s);
             });
 
             function finalizeHandler(){
