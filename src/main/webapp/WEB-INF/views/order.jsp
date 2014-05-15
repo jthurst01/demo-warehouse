@@ -33,7 +33,7 @@
                 s.height = sh + "px";
                 console.log("s:", s);
                 console.log("s.height", s.height);
-                Sfdc.canvas.client.resize(sr.client, s);
+                Sfdc.canvas.client.autogrow(sr.client, true);
             });
 
             function finalizeHandler(){
