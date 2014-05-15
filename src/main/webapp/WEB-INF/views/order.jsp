@@ -28,15 +28,7 @@
                     $('#finalizeButton').click(null);
                     $('#finalizeButton').hide();
                 }
-                var sh, ch, sw, cw, s = {height : ""}, docElement = Sfdc.canvas.document().documentElement;
-                sh = docElement.scrollHeight;
-                ch = docElement.clientHeight;
-                if (ch !== sh) {
-                	s.height = sh + "px";
-                }
-                console.log("s:", s);
-                console.log("s.height", s.height);
-                Sfdc.canvas.client.resize(sr.client, s);
+                Sfdc.canvas.client.autogrow(sr.client, true);
             });
 
             function finalizeHandler(){
