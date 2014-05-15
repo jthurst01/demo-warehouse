@@ -148,13 +148,11 @@
     <div class="container">
         <div>
             <div id="myPageBlockTable">
-                <h1>S1RecordHomePreview</h1>
+                <h2>Record Page Layout Preview - Click to Open App</h2>
                 <table id="myTable" width="100%">
                     <col width="20%">
-                    <tr><td class="myCol">Invoice Statement:</td><td class="valueCol"><c:out value="${order.orderId}"/></td></tr>
-                    <tr><td class="myCol">Invoice Statement Id:</td><td class="valueCol"><c:out value="${order.id}"/></td></tr>
-                    <tr><td class="myCol">Total:</td><td class="valueCol"><c:out value="${order.total}"/></td></tr>
-                    <tr><td class="myCol">Status:</td><td class="valueCol" valign="center"><c:out value="${order.status}"/>
+                    <tr><td class="myCol">Order Total:</td><td class="valueCol"><c:out value="${order.total}"/></td></tr>
+                    <tr><td class="myCol">Order Status:</td><td class="valueCol" valign="center"><c:out value="${order.status}"/>
                         <c:choose>
                             <c:when test="${order.status == 'Shipped'}">
                                 <img src="/resources/images/shipped.png" />
@@ -165,25 +163,6 @@
                         </c:choose>
                     </td></tr>
                 </table>
-                <h2 id="lineItemTitle">
-                    Line Items
-                </h2>
-                <table id="lineItemTable">
-                    <tr><th style="border-left:0px;">Line Item Name</th><th>Quantity</th><th>Unit Price</th><th>Total</th><th style="border-right:0px;">Item</th></tr>
-                    <c:forEach items="${order.lineItems}" var="li">
-                        <tr class="myLineItemTableRow">
-                            <td><a href="#" onclick="window.top.location.href = getRoot() + '/${li.id}';"><c:out value="${li.lineItemId}"/></a></td>
-                            <td><c:out value="${li.quantity}"/></td>
-                            <td><c:out value="${li.unitPrice}"/></td>
-                            <td><c:out value="${li.total}"/></td>
-                            <td><c:out value="${li.item}"/></td>
-                        </tr>
-                    </c:forEach>
-                </table>
-                <button onclick="location.href='/orderui'">Back</button>
-                <c:if test="${order.status ne 'Shipped'}">
-                    <button id="finalizeButton">Finalize</button>
-                </c:if>
             </div>
         </div>
     </div>
