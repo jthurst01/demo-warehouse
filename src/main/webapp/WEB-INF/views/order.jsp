@@ -2,7 +2,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
-
+<!DOCTYPE html>
 <html>
 	<head>
 		<title>Invoice Statement</title>
@@ -29,14 +29,14 @@
                     $('#finalizeButton').hide();
                 }
                 var sh, ch, sw, cw, s = {height : ""}, docElement = Sfdc.canvas.document().documentElement;
-                setTimeout(function () {
-                    sh = docElement.scrollHeight;
-                	s.height = sh + "px";
-                	console.log("s:", s);
-                	console.log("s.height", s.height);
-                    Sfdc.canvas.client.resize(sr.client, s);
-                },300);
-                //Sfdc.canvas.client.autogrow(sr.client, true);
+                //setTimeout(function () {
+                //  sh = docElement.scrollHeight;
+                //	s.height = sh + "px";
+                //	console.log("s:", s);
+                //	console.log("s.height", s.height);
+                //    Sfdc.canvas.client.resize(sr.client, s);
+                //},300);
+                Sfdc.canvas.client.autogrow(sr.client, true);
             });
 
             function finalizeHandler(){
