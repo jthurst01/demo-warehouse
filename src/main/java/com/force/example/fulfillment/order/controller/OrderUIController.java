@@ -83,12 +83,12 @@ public class OrderUIController {
 		Order order = orderService.findOrder(id);
 		if (order == null) {
 			//throw new ResourceNotFoundException(id);
-            model.addAttribute("ordernf", order);
+            model.addAttribute("ordernf");
             return "ordernf";
 		}
 		model.addAttribute("order", order);
         System.out.println("sublication in getOrdersPage:" + subLocation);
-        if (subLocation == "S1RecordHomePreview") {
+        if (subLocation.equals("S1RecordHomePreview")) {
             System.out.println("in getOrdersPage");
             //throw new ResourceNotFoundException(id);
             model.addAttribute("s1rp", order);
