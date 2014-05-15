@@ -34,10 +34,8 @@
                 	s.height = sh + "px";
                 	console.log("s:", s);
                 	console.log("s.height", s.height);
-                    submodules.frame.resize(sr.client, s);
-                    submodules.frame.autogrow(client, autog);
+                    Sfdc.canvas.frame.resize(sr.client, s);
                 },300);
-                Sfdc.canvas.client.autogrow(sr.client, true);
             });
 
             function finalizeHandler(){
