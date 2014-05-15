@@ -11,7 +11,7 @@
     <script>
         var sr =  JSON.parse('${not empty signedRequestJson?signedRequestJson:"{}"}');
         Sfdc.canvas(function() {
-            Sfdc.canvas.client.autogrow(sr.client, true);
+            Sfdc.canvas.client.resize(sr.client, {height: "100px"});
         });
     </script>
 </head>
@@ -21,7 +21,7 @@
         <h2 style="font-size: 25; font-weight: bold; font-family: Arial;">Invoice Statement Not Found</h2>
         <h2 style="font-size: 16; font-weight: bold; font-family: Arial;">Edit/Save the Invoice Statement or associated Line Items to sync with the fulfillment system.</h2>
     </div>
-    <div>
+</div>
 </body>
 </html>
 
