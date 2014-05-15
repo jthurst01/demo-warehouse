@@ -28,16 +28,11 @@
                     $('#finalizeButton').click(null);
                     $('#finalizeButton').hide();
                 }
-                var sh, ch, sw, cw, s = {height : "", width : ""}, docElement = Sfdc.canvas.document().documentElement;
+                var sh, ch, sw, cw, s = {height : ""}, docElement = Sfdc.canvas.document().documentElement;
                 sh = docElement.scrollHeight;
                 ch = docElement.clientHeight;
                 if (ch !== sh) {
                 	s.height = sh + "px";
-                }
-                sw = docElement.scrollWidth;
-                cw = docElement.clientWidth;
-                if (sw !== cw) {
-        	        s.width = sw + "px";
                 }
                 Sfdc.canvas.client.resize(sr.client, s);
             });
