@@ -65,11 +65,7 @@ public class OrderUIController {
             System.out.println("orderId: " + orderId);
             if(orderId != null) {
                 System.out.println("subLocation: " + subLocation);
-                if (subLocation != null) {
-                    model.addAttribute("ordernf");
-                    return "ordernf";
-                }
-                return getOrderPage(orderId, model);
+                return getOrderPage(orderId, subLocation, model);
             }
         }
         return getOrdersPage(model);
@@ -83,7 +79,7 @@ public class OrderUIController {
     }
 
 	@RequestMapping(value="{id}", method=RequestMethod.GET)
-	public String getOrderPage(@PathVariable String id, Model model) {
+	public String getOrderPage(@PathVariable String id, String subLocation, Model model) {
 		Order order = orderService.findOrder(id);
 		if (order == null) {
 			//throw new ResourceNotFoundException(id);
@@ -91,6 +87,11 @@ public class OrderUIController {
             return "ordernf";
 		}
 		model.addAttribute("order", order);
+        if (subLocation == "S1RecordHomePreview") {
+            //throw new ResourceNotFoundException(id);
+            model.addAttribute("s1rp", order);
+            return "s1rp";
+        }
 
 		return "order";
 	}
