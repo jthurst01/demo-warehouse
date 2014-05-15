@@ -59,7 +59,7 @@ public class OrderUIController {
         //}
         Map<String, Object> record = ce.getRecord();
         if (record != null) {
-            String orderId = (String)params.get("Id");
+            String orderId = (String)record.get("Id");
             if(orderId != null) {
                 return getOrderPage(orderId, model);
             }
