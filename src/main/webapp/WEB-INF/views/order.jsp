@@ -28,6 +28,7 @@
                     $('#finalizeButton').click(null);
                     $('#finalizeButton').hide();
                 }
+                Sfdc.canvas.client.autogrow(sr.client, true);
             });
 
             function finalizeHandler(){
