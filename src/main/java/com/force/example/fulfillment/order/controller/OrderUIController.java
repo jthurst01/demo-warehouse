@@ -89,6 +89,7 @@ public class OrderUIController {
 		model.addAttribute("order", order);
         System.out.println("sublication in getOrdersPage:" + subLocation);
         if (subLocation == "S1RecordHomePreview") {
+            System.out.println("in getOrdersPage");
             //throw new ResourceNotFoundException(id);
             model.addAttribute("s1rp", order);
             return "s1rp";
