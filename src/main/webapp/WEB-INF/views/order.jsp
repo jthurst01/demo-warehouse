@@ -28,7 +28,7 @@
                     $('#finalizeButton').click(null);
                     $('#finalizeButton').hide();
                 }
-                var sh, ch, sw, cw, s = {height : "", width : ""}, docElement = $$.document().documentElement;
+                var sh, ch, sw, cw, s = {height : "", width : ""}, docElement = Sfdc.canvas.document().documentElement;
                 sh = docElement.scrollHeight;
                 ch = docElement.clientHeight;
                 if (ch !== sh) {
