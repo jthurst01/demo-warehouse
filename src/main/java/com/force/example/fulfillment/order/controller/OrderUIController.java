@@ -57,7 +57,7 @@ public class OrderUIController {
         //        return getOrderPage(orderId, model);
         //    }
         //}
-        String subLocation = (String)ce.get("subLocation");
+        String subLocation = ce.getSublocation();
         Map<String, Object> record = ce.getRecord();
         if (record != null) {
             String orderId = (String)record.get("Id");
