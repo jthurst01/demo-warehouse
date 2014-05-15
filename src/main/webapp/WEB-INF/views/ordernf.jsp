@@ -11,7 +11,7 @@
     <script>
         var sr =  JSON.parse('${not empty signedRequestJson?signedRequestJson:"{}"}');
         Sfdc.canvas(function() {
-            Sfdc.canvas.client.resize(sr.client, {height: "100px"});
+            Sfdc.canvas.client.resize(sr.client, {height: "200px"});
         });
     </script>
 </head>
