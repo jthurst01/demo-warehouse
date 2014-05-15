@@ -2,10 +2,14 @@ package com.force.example.fulfillment.order.controller;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
+import javax.validation.Validator;
 
 import canvas.CanvasContext;
 import canvas.CanvasEnvironmentContext;
 import canvas.CanvasRequest;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -31,8 +35,12 @@ public class OrderUIController {
 	@Autowired
 	private OrderService orderService;
 
+	private Validator validator;
+
 	@Autowired
-	public OrderUIController() {}
+	public OrderUIController(Validator validator) {
+		this.validator = validator;
+	}
 
 	@RequestMapping(method=RequestMethod.POST)
 	public String postSignedRequest(Model model,@RequestParam(value="signed_request")String signedRequest, HttpServletRequest request){
@@ -70,13 +78,13 @@ public class OrderUIController {
         return "orders";
     }
 
-	@RequestMapping(value="{id}", method=RequestMethod.GET)
-	public String getOrderPage(@PathVariable String id, String subLocation, Model model) {
-		Order order = orderService.findOrder(id);
-		if (order == null) {
+    @RequestMapping(value="{id}", method=RequestMethod.GET)
+    public String getOrderPage(@PathVariable String id, String subLocation, Model model) {
+        Order order = orderService.findOrder(id);
+        if (order == null) {
             model.addAttribute("ordernf");
             return "ordernf";
-		}
+        }
         if (subLocation.equals("S1RecordHomePreview")) {
             model.addAttribute("s1rp", order);
             return "s1rp";
@@ -86,10 +94,10 @@ public class OrderUIController {
             return "s1mp";
         }
         model.addAttribute("order", order);
-		return "order";
-	}
+        return "order";
+    }
 
-	private static String getConsumerSecret(){
+	private static final String getConsumerSecret(){
 	    String secret = System.getenv("CANVAS_CONSUMER_SECRET");
 	    if (null == secret){
 	        throw new IllegalStateException("Consumer secret not found in environment.  You must define the CANVAS_CONSUMER_SECRET environment variable.");
