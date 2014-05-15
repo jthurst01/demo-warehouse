@@ -59,9 +59,12 @@ public class OrderUIController {
         //}
         String subLocation = ce.getSublocation();
         Map<String, Object> record = ce.getRecord();
+        System.out.println("record: " + record);
         if (record != null) {
             String orderId = (String)record.get("Id");
+            System.out.println("orderId: " + orderId);
             if(orderId != null) {
+                System.out.println("subLocation: " + subLocation);
                 if (subLocation != null) {
                     model.addAttribute("ordernf");
                     return "ordernf";
