@@ -29,10 +29,14 @@
                     $('#finalizeButton').hide();
                 }
                 var sh, ch, sw, cw, s = {height : ""}, docElement = Sfdc.canvas.document().documentElement;
-                sh = docElement.scrollHeight;
-                s.height = sh + "px";
-                console.log("s:", s);
-                console.log("s.height", s.height);
+                setTimeout(function () {
+                    sh = docElement.scrollHeight;
+                	s.height = sh + "px";
+                	console.log("s:", s);
+                	console.log("s.height", s.height);
+                    submodules.frame.resize(sr.client, s);
+                    submodules.frame.autogrow(client, autog);
+                },300);
                 Sfdc.canvas.client.autogrow(sr.client, true);
             });
 
