@@ -85,13 +85,15 @@ public class OrderUIController {
             model.addAttribute("ordernf");
             return "ordernf";
         }
-        if (subLocation.equals("S1RecordHomePreview")) {
-            model.addAttribute("s1rp", order);
-            return "s1rp";
-        }
-        if (subLocation.equals("S1MobileCardPreview")) {
-            model.addAttribute("s1mp", order);
-            return "s1mp";
+        if (subLocation != null) {
+            if (subLocation.equals("S1RecordHomePreview")) {
+                model.addAttribute("s1rp", order);
+                return "s1rp";
+            }
+            if (subLocation.equals("S1MobileCardPreview")) {
+                model.addAttribute("s1mp", order);
+                return "s1mp";
+            }
         }
         model.addAttribute("order", order);
         return "order";
