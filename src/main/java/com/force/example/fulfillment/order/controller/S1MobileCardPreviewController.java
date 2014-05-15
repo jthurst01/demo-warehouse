@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 
 @Controller
-@RequestMapping(value="/s1rp")
+@RequestMapping(value="/s1mp")
 public class S1MobileCardPreviewController {
 
     @Autowired
