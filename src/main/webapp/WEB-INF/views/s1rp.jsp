@@ -97,7 +97,7 @@
     <div class="container">
         <div>
             <div id="myPageBlockTable">
-                <h3>Page Layout Preview - Click to Open</h3>
+                <h4 color=#4a4f5b" font-weight="bold">Page Layout Preview - Click to Open</h4>
                 <table id="myTable" width="100%">
                     <col width="40%">
                     <tr><td class="myCol">Invoice Order Total:</td><td class="valueCol"><c:out value="${order.total}"/></td></tr>
