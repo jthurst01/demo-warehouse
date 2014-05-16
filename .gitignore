@@ -5,6 +5,8 @@
 /tomcat.*
 /.idea
 /*.iml
+/*.ipr
+/*.iws
 /.springBeans
 *.svn
 .DS_Store
