@@ -55,16 +55,8 @@
                     type: "PUT",
                     data: JSON.stringify({status:"Shipped", orderId:"${order.orderId}", total:"${order.total}"}),
                     success: function() {
-                        var site = (!!sr.context.user.siteUrlPrefix) ? (sr.context.user.siteUrlPrefix) : "";
-                        var backLocation = document.referrer;
-                        if (backLocation) {
-                            if (backLocation.indexOf("?") > -1) {
-                                backLocation += "&randomParam=" + new Date().getTime();
-                            } else {
-                                backLocation += "?randomParam=" + new Date().getTime();
-                            }
-                            window.location.assign(backLocation);
-                        }
+                        Sfdc.canvas.client.repost();
+                        //var site = (!!sr.context.user.siteUrlPrefix) ? (sr.context.user.siteUrlPrefix) : "";
                         //window.top.location.href = "/order?id=${order.id}";
                     },
                     error: function(){
