@@ -1,32 +1,13 @@
-# Spring MVC Fulfillment Base Application
+# Demo Warehouse Application using Force.com Canvas - Summer '14
 
-This is a simple web application that implements a web service and an HTML front end to accept Invoice Statement IDs and store them locally.
+This is a simple web application that implements Force.com Canvas using the new Summer '14 features, including:
 
-## Running the application locally
-
-Build with:
-
-    $ mvn clean install
-
-Then run with:
-
-    $ java -jar target/dependency/webapp-runner.jar target/*.war
-
-## Running on Heroku
-
-Clone this project locally:
-
-    $ git clone https://github.com/metadaddy-sfdc/spring-mvc-fulfillment-base.git
-
-Create a new app on Heroku (make sure you have the [Heroku Toolbelt](http://toolbelt.heroku.com) installed):
-
-    $ heroku login
-    $ heroku create -s cedar
-
-Upload the app to Heroku:
-
-    $ git push heroku master
-
-Open the app in your browser:
-
-    $ heroku open
+   * Salesforce1 - Force.com Canvas in Mobile Navigation
+   * Salesforce1 - Force.com Canvas in a Page Layout Preview
+   * Salesforce1 - Force.com Canvas in a Page Layout Fullview
+   * Salesforce1 - Force.com Canvas in a Mobile Card Preview
+   * Salesforce1 - Force.com Canvas in a Mobile Card Fullview
+   * Force.com Canvas Signed Request on demand
+   * Force.com Canvas Apex Lifecycle Handler
+   * Force.com Canvas Record Detail in Signed Request
+   
