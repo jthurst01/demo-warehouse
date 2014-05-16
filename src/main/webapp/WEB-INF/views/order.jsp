@@ -23,10 +23,12 @@
                 if (sr.client.oauthToken){
                     $('#finalizeButton').click(finalizeHandler);
                     $('#finalizeButton').show();
+                    $('#backButton').hide();
                 }
                 else{
                     $('#finalizeButton').click(null);
                     $('#finalizeButton').hide();
+                    $('#backButton').show();
                 }
                 Sfdc.canvas.client.autogrow(sr.client, true);
             });
@@ -179,7 +181,7 @@
                         </tr>
                     </c:forEach>
                 </table>
-                <button onclick="location.href='/orderui'">Back</button>
+                <button id="backButton" onclick="location.href='/orderui'">Back</button>
 			    <c:if test="${order.status ne 'Shipped'}">
                     <button id="finalizeButton">Finalize</button>
                 </c:if>

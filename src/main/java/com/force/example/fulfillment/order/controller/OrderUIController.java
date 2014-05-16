@@ -94,6 +94,14 @@ public class OrderUIController {
                 model.addAttribute("order", order);
                 return "s1mp";
             }
+            if (subLocation.equals("S1RecordHomeFullView")) {
+                model.addAttribute("order", order);
+                return "s1rf";
+            }
+            if (subLocation.equals("S1MobileCardFullView")) {
+                model.addAttribute("order", order);
+                return "s1mf";
+            }
         }
         model.addAttribute("order", order);
         return "order";
