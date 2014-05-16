@@ -56,6 +56,7 @@
                     data: JSON.stringify({status:"Shipped", orderId:"${order.orderId}", total:"${order.total}"}),
                     success: function() {
                         Sfdc.canvas.client.repost();
+                        history.go(-1);
                         //var site = (!!sr.context.user.siteUrlPrefix) ? (sr.context.user.siteUrlPrefix) : "";
                         //window.top.location.href = "/order?id=${order.id}";
                     },
