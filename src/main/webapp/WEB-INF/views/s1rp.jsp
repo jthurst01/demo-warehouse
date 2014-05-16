@@ -99,7 +99,7 @@
             <div id="myPageBlockTable">
                 <h3>Page Layout Preview - Click to Open</h3>
                 <table id="myTable" width="100%">
-                    <col width="20%">
+                    <col width="40%">
                     <tr><td class="myCol">Invoice Order Total:</td><td class="valueCol"><c:out value="${order.total}"/></td></tr>
                     <tr><td class="myCol">Number of Items:</td><td class="valueCol"><c:out value="${fn:length(order.lineItems)}"/></td></tr>
                     <tr><td class="myCol">Shipment Status:</td><td class="valueCol" valign="center"><c:out value="${order.status}"/>
