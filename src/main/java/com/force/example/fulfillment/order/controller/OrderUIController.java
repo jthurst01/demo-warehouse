@@ -94,11 +94,11 @@ public class OrderUIController {
                 model.addAttribute("order", order);
                 return "s1mp";
             }
-            if (subLocation.equals("S1RecordHomeFullView")) {
+            if (subLocation.equals("S1RecordHomeFullview")) {
                 model.addAttribute("order", order);
                 return "s1rf";
             }
-            if (subLocation.equals("S1MobileCardFullView")) {
+            if (subLocation.equals("S1MobileCardFullview")) {
                 model.addAttribute("order", order);
                 return "s1mf";
             }
