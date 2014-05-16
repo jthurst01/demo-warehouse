@@ -144,7 +144,7 @@
     </style>
 
 </head>
-<body>
+<body onload="document.refresh();">
     <div id="bodyDiv" style="width:inherit;">
         <div class="container">
             <div>
