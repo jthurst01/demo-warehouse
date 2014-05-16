@@ -28,7 +28,6 @@ public class S1RecordHomePreviewController {
     public S1RecordHomePreviewController(Validator validator) {
     }
 
-
     @RequestMapping(method= RequestMethod.GET)
     public String getPage() {
         return "s1rp";

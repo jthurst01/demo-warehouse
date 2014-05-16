@@ -144,16 +144,16 @@
 
 </head>
 <body>
-<div id="bodyDiv" style="width:inherit;">
     <div id="bodyDiv" style="width:inherit;">
         <div class="container">
             <div>
                 <div id="myPageBlockTable">
-                    <h2>Mobile Card Preview - Click to Open App</h2>
+                    <h3>Mobile Card Preview - Click to Open</h3>
                     <table id="myTable" width="100%">
                         <col width="20%">
-                        <tr><td class="myCol">Order Total:</td><td class="valueCol"><c:out value="${order.total}"/></td></tr>
-                        <tr><td class="myCol">Order Status:</td><td class="valueCol" valign="center"><c:out value="${order.status}"/>
+                        <tr><td class="myCol">Invoice Order Total:</td><td class="valueCol"><c:out value="${order.total}"/></td></tr>
+                        <tr><td class="myCol">Number of Items:</td><td class="valueCol"><c:out value="${fn:length(order.lineItems)}"/></td></tr>
+                        <tr><td class="myCol">Shipment Status:</td><td class="valueCol" valign="center"><c:out value="${order.status}"/>
                             <c:choose>
                                 <c:when test="${order.status == 'Shipped'}">
                                     <img src="/resources/images/shipped.png" />
@@ -168,6 +168,5 @@
             </div>
         </div>
     </div>
-</div>
 </body>
 </html>
