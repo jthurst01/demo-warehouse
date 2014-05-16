@@ -56,7 +56,15 @@
                     data: JSON.stringify({status:"Shipped", orderId:"${order.orderId}", total:"${order.total}"}),
                     success: function() {
                         var site = (!!sr.context.user.siteUrlPrefix) ? (sr.context.user.siteUrlPrefix) : "";
-                        history.go(-1);
+                        var backLocation = document.referrer;
+                        if (backLocation) {
+                            if (backLocation.indexOf("?") > -1) {
+                                backLocation += "&randomParam=" + new Date().getTime();
+                            } else {
+                                backLocation += "?randomParam=" + new Date().getTime();
+                            }
+                            window.location.assign(backLocation);
+                        }
                         //window.top.location.href = "/order?id=${order.id}";
                     },
                     error: function(){
