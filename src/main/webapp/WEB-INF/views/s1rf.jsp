@@ -56,7 +56,7 @@
                     data: JSON.stringify({status:"Shipped", orderId:"${order.orderId}", total:"${order.total}"}),
                     success: function() {
                         var site = (!!sr.context.user.siteUrlPrefix) ? (sr.context.user.siteUrlPrefix) : "";
-                        window.top.location.href = "/order/${order.id}";
+                        window.top.location.href = "/order?id=${order.id}";
                     },
                     error: function(){
                         alert("Error occurred updating local status.");
