@@ -64,7 +64,7 @@ public class OrderUIController {
             String orderId = (String)record.get("Id");
             System.out.println("orderId: " + orderId);
             if(orderId != null) {
-                System.out.println("subLocation: " + subLocation);
+                //System.out.println("subLocation: " + subLocation);
                 return getOrderPage(orderId, subLocation, model);
             }
         }
