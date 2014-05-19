@@ -50,13 +50,13 @@ public class OrderUIController {
         session.setAttribute(SIGNED_REQUEST, srJson);
         cc = cr.getContext();
         CanvasEnvironmentContext ce = cc.getEnvironmentContext();
-//        Map<String, Object> params = ce.getParameters();
-//        if (params != null) {
-//            String orderId = (String)params.get("orderId");
-//            if(orderId != null) {
-//                return getOrderPage(orderId, "",  model);
-//            }
-//        }
+        Map<String, Object> params = ce.getParameters();
+        if (params != null) {
+            String orderId = (String)params.get("orderId");
+            if(orderId != null) {
+                return getOrderPage(orderId, "",  model);
+            }
+        }
         String subLocation = ce.getSublocation();
         Map<String, Object> record = ce.getRecord();
         System.out.println("record: " + record);
